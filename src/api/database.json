@@ -1,5 +1,5 @@
 {
-  "Employee": [
+  "employees": [
     {
       "id": 1,
       "name": "Alice",
@@ -74,54 +74,222 @@
     }
   ],
 
-  "Customer": [
-    {
-      "id": 1,
-      "name": "Dana",
-      "address": "101 First Ave",
-      "phone": 5554444,
-      "email": "dana@example.com"
-    },
-    {
-      "id": 2,
-      "name": "Eli",
-      "address": "202 Second Ave",
-      "phone": 5555555,
-      "email": "eli@example.com"
-    }
-  ],
-  "Order": [
-    {
-      "id": 1,
-      "customerId": 1,
-      "orderTime": "2025-04-30T18:30:00Z",
-      "tableNumber": 5,
-      "status": "Pending",
-      "gratuity": 5,
-      "totalCost": 27,
-      "takenByEmployeeId": 1,
-      "deliveredByEmployeeId": null
-    },
-    {
-      "id": 2,
-      "customerId": 2,
-      "orderTime": "2025-04-30T19:00:00Z",
-      "tableNumber": null,
-      "status": "Pending",
-      "gratuity": 0,
-      "totalCost": 15,
-      "takenByEmployeeId": 3,
-      "deliveredByEmployeeId": null
-    }
-  ],
-  "Size": [
+  "customers": [
+  {
+    "id": 1,
+    "name": "Dana",
+    "address": "101 First Ave",
+    "phone": 5554444,
+    "email": "dana@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Eli",
+    "address": "202 Second Ave",
+    "phone": 5555555,
+    "email": "eli@example.com"
+  },
+  {
+    "id": 3,
+    "name": "Sara",
+    "address": "303 Third Ave",
+    "phone": 5556666,
+    "email": "sara@example.com"
+  },
+  {
+    "id": 4,
+    "name": "Mark",
+    "address": "404 Fourth Ave",
+    "phone": 5557777,
+    "email": "mark@example.com"
+  },
+  {
+    "id": 5,
+    "name": "Jill",
+    "address": "505 Fifth Ave",
+    "phone": 5558888,
+    "email": "jill@example.com"
+  },
+  {
+    "id": 6,
+    "name": "Tom",
+    "address": "606 Sixth Ave",
+    "phone": 5559999,
+    "email": "tom@example.com"
+  },
+  {
+    "id": 7,
+    "name": "Lucy",
+    "address": "707 Seventh Ave",
+    "phone": 5550000,
+    "email": "lucy@example.com"
+  },
+  {
+    "id": 8,
+    "name": "Leo",
+    "address": "808 Eighth Ave",
+    "phone": 5551111,
+    "email": "leo@example.com"
+  },
+  {
+    "id": 9,
+    "name": "Anna",
+    "address": "909 Ninth Ave",
+    "phone": 5552222,
+    "email": "anna@example.com"
+  },
+  {
+    "id": 10,
+    "name": "Eve",
+    "address": "1010 Tenth Ave",
+    "phone": 5553333,
+    "email": "eve@example.com"
+  },
+  {
+    "id": 11,
+    "name": "Paul",
+    "address": "1111 Eleventh Ave",
+    "phone": 5554444,
+    "email": "paul@example.com"
+  },
+  {
+    "id": 12,
+    "name": "Clara",
+    "address": "1212 Twelfth Ave",
+    "phone": 5555555,
+    "email": "clara@example.com"
+  },
+  {
+    "id": 13,
+    "name": "Grace",
+    "address": "1313 Thirteenth Ave",
+    "phone": 5556666,
+    "email": "grace@example.com"
+  },
+  {
+    "id": 14,
+    "name": "George",
+    "address": "1414 Fourteenth Ave",
+    "phone": 5557777,
+    "email": "george@example.com"
+  },
+  {
+    "id": 15,
+    "name": "Victor",
+    "address": "1515 Fifteenth Ave",
+    "phone": 5558888,
+    "email": "victor@example.com"
+  }
+],
+"orders": [
+  {
+    "id": 1,
+    "customerId": 1,
+    "orderTime": "2025-05-01T18:30:00Z",
+    "tableNumber": 5,
+    "status": "Pending",
+    "gratuity": 5,
+    "totalCost": 27,
+    "takenByEmployeeId": 1,
+    "deliveredByEmployeeId": null
+  },
+  {
+    "id": 2,
+    "customerId": 2,
+    "orderTime": "2025-04-30T19:00:00Z",
+    "tableNumber": null,
+    "status": "Pending",
+    "gratuity": 0,
+    "totalCost": 15,
+    "takenByEmployeeId": 3,
+    "deliveredByEmployeeId": null
+  },
+  {
+    "id": 3,
+    "customerId": 3,
+    "orderTime": "2025-05-01T12:00:00Z",
+    "tableNumber": 3,
+    "status": "Completed",
+    "gratuity": 3,
+    "totalCost": 20,
+    "takenByEmployeeId": 2,
+    "deliveredByEmployeeId": 4
+  },
+  {
+    "id": 4,
+    "customerId": 4,
+    "orderTime": "2025-05-01T14:45:00Z",
+    "tableNumber": 1,
+    "status": "Pending",
+    "gratuity": 4,
+    "totalCost": 33,
+    "takenByEmployeeId": 1,
+    "deliveredByEmployeeId": null
+  },
+  {
+    "id": 5,
+    "customerId": 5,
+    "orderTime": "2025-04-28T10:20:00Z",
+    "tableNumber": 2,
+    "status": "Completed",
+    "gratuity": 2,
+    "totalCost": 18,
+    "takenByEmployeeId": 2,
+    "deliveredByEmployeeId": 3
+  },
+  {
+    "id": 6,
+    "customerId": 6,
+    "orderTime": "2025-04-27T21:10:00Z",
+    "tableNumber": 6,
+    "status": "Pending",
+    "gratuity": 6,
+    "totalCost": 22,
+    "takenByEmployeeId": 4,
+    "deliveredByEmployeeId": null
+  },
+  {
+    "id": 7,
+    "customerId": 7,
+    "orderTime": "2025-04-25T17:15:00Z",
+    "tableNumber": 4,
+    "status": "Completed",
+    "gratuity": 1,
+    "totalCost": 19,
+    "takenByEmployeeId": 3,
+    "deliveredByEmployeeId": 2
+  },
+  {
+    "id": 8,
+    "customerId": 8,
+    "orderTime": "2025-04-24T13:05:00Z",
+    "tableNumber": null,
+    "status": "Pending",
+    "gratuity": 0,
+    "totalCost": 12,
+    "takenByEmployeeId": 1,
+    "deliveredByEmployeeId": null
+  },
+  {
+    "id": 9,
+    "customerId": 9,
+    "orderTime": "2025-04-23T11:40:00Z",
+    "tableNumber": 7,
+    "status": "Completed",
+    "gratuity": 7,
+    "totalCost": 25,
+    "takenByEmployeeId": 2,
+    "deliveredByEmployeeId": 4
+  }
+],
+  "sizes": [
     { "id": 1, "name": "Kids", "price": 6.0 },
     { "id": 2, "name": "Small", "price": 10.0 },
     { "id": 3, "name": "Medium", "price": 12.5 },
     { "id": 4, "name": "Large", "price": 15.0 },
     { "id": 5, "name": "X Large", "price": 18.0 }
   ],
-  "Cheese": [
+  "cheeses": [
     { "id": 1, "name": "Mozzarella" },
     { "id": 2, "name": "Buffalo Mozzarella" },
     { "id": 3, "name": "Four Cheese" },
@@ -129,14 +297,14 @@
     { "id": 5, "name": "Ricotta" },
     { "id": 6, "name": "None" }
   ],
-  "Sauce": [
+  "sauces": [
     { "id": 1, "name": "Marinara" },
     { "id": 2, "name": "Arrabbiata" },
     { "id": 3, "name": "Garlic White" },
     { "id": 4, "name": "Diavolo" },
     { "id": 5, "name": "None" }
   ],
-  "Topping": [
+  "toppings": [
     { "id": 1, "name": "Sausage", "price": 1.0 },
     { "id": 2, "name": "Pepperoni", "price": 1.0 },
     { "id": 3, "name": "Mushroom", "price": 0.75 },
@@ -146,7 +314,7 @@
     { "id": 7, "name": "Basil", "price": 0.5 },
     { "id": 8, "name": "Extra cheese", "price": 1.0 }
   ],
-  "Pizza": [
+  "pizzas": [
     {
       "id": 1,
       "orderId": 1,
@@ -172,7 +340,7 @@
       "totalCost": 15.0
     }
   ],
-  "pizzaTopping": [
+  "pizzaToppings": [
     { "id": 1, "pizzaId": 1, "toppingId": 2 },
     { "id": 2, "pizzaId": 1, "toppingId": 3 },
     { "id": 3, "pizzaId": 2, "toppingId": 1 },
