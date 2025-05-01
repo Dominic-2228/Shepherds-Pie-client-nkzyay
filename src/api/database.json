@@ -1,61 +1,183 @@
 {
-    "Employee": [
-      { "id": 1, "name": "Alice", "address": "123 Main St", "phone": 5551111, "email": "alice@example.com", "isAssigned": true, "isAdmin": false },
-      { "id": 2, "name": "Bob", "address": "456 Side St", "phone": 5552222, "email": "bob@example.com", "isAssigned": false, "isAdmin": true },
-      { "id": 3, "name": "Charlie", "address": "789 Broad St", "phone": 5553333, "email": "charlie@example.com", "isAssigned": true, "isAdmin": false }
-    ],
-    "Customer": [
-      { "id": 1, "name": "Dana", "address": "101 First Ave", "phone": 5554444, "email": "dana@example.com" },
-      { "id": 2, "name": "Eli", "address": "202 Second Ave", "phone": 5555555, "email": "eli@example.com" }
-    ],
-    "Order": [
-      { "id": 1, "customerId": 1, "orderTime": "2025-04-30T18:30:00Z", "tableNumber": 5, "status": "Pending", "gratuity": 5, "totalCost": 27, "takenByEmployeeId": 1, "deliveredByEmployeeId": null },
-      { "id": 2, "customerId": 2, "orderTime": "2025-04-30T19:00:00Z", "tableNumber": null, "status": "Pending", "gratuity": 0, "totalCost": 15, "takenByEmployeeId": 3, "deliveredByEmployeeId": null }
-    ],
-    "Size": [
-      { "id": 1, "name": "Kids", "price": 6.00 },
-      { "id": 2, "name": "Small", "price": 10.00 },
-      { "id": 3, "name": "Medium", "price": 12.50 },
-      { "id": 4, "name": "Large", "price": 15.00 },
-      { "id": 5, "name": "X Large", "price": 18.00 }
-    ],
-    "Cheese": [
-      { "id": 1, "name": "Mozzarella" },
-      { "id": 2, "name": "Buffalo Mozzarella" },
-      { "id": 3, "name": "Four Cheese" },
-      { "id": 4, "name": "Vegan" },
-      { "id": 5, "name": "Ricotta" },
-      { "id": 6, "name": "None" }
-    ],
-    "Sauce": [
-      { "id": 1, "name": "Marinara" },
-      { "id": 2, "name": "Arrabbiata" },
-      { "id": 3, "name": "Garlic White" },
-      { "id": 4, "name": "Diavolo" },
-      { "id": 5, "name": "None" }
-    ],
-    "Topping": [
-      { "id": 1, "name": "Sausage", "price": 1.00 },
-      { "id": 2, "name": "Pepperoni", "price": 1.00 },
-      { "id": 3, "name": "Mushroom", "price": 0.75 },
-      { "id": 4, "name": "Onion", "price": 0.50 },
-      { "id": 5, "name": "Green pepper", "price": 0.50 },
-      { "id": 6, "name": "Black olive", "price": 0.75 },
-      { "id": 7, "name": "Basil", "price": 0.50 },
-      { "id": 8, "name": "Extra cheese", "price": 1.00 }
-    ],
-    "Pizza": [
-      { "id": 1, "orderId": 1, "sizeId": 3, "sauceId": 1, "cheeseId": 1, "totalCost": 13.75 },
-      { "id": 2, "orderId": 1, "sizeId": 2, "sauceId": 2, "cheeseId": 3, "totalCost": 13.25 },
-      { "id": 3, "orderId": 2, "sizeId": 4, "sauceId": 3, "cheeseId": 4, "totalCost": 15.00 }
-    ],
-    "pizzaTopping": [
-      { "id": 1, "pizzaId": 1, "toppingId": 2 },
-      { "id": 2, "pizzaId": 1, "toppingId": 3 },
-      { "id": 3, "pizzaId": 2, "toppingId": 1 },
-      { "id": 4, "pizzaId": 2, "toppingId": 8 },
-      { "id": 5, "pizzaId": 3, "toppingId": 5 },
-      { "id": 6, "pizzaId": 3, "toppingId": 6 }
-    ]
-  }
-  
+  "Employee": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "address": "123 Main St",
+      "phone": 5551111,
+      "email": "alice@example.com",
+      "isAssigned": false,
+      "isAdmin": false
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "address": "456 Side St",
+      "phone": 5552222,
+      "email": "bob@example.com",
+      "isAssigned": false,
+      "isAdmin": true
+    },
+    {
+      "id": 3,
+      "name": "Charlie",
+      "address": "789 Broad St",
+      "phone": 5553333,
+      "email": "charlie@example.com",
+      "isAssigned": false,
+      "isAdmin": false
+    },
+    {
+      "id": 4,
+      "name": "Diana",
+      "address": "321 Oak St",
+      "phone": 5554444,
+      "email": "diana@example.com",
+      "isAssigned": false,
+      "isAdmin": false
+    },
+    {
+      "id": 5,
+      "name": "Ethan",
+      "address": "654 Pine St",
+      "phone": 5555555,
+      "email": "ethan@example.com",
+      "isAssigned": false,
+      "isAdmin": false
+    },
+    {
+      "id": 6,
+      "name": "Fiona",
+      "address": "987 Cedar St",
+      "phone": 5556666,
+      "email": "fiona@example.com",
+      "isAssigned": false,
+      "isAdmin": true
+    },
+    {
+      "id": 7,
+      "name": "George",
+      "address": "135 Maple St",
+      "phone": 5557777,
+      "email": "george@example.com",
+      "isAssigned": false,
+      "isAdmin": false
+    },
+    {
+      "id": 8,
+      "name": "Hannah",
+      "address": "246 Birch St",
+      "phone": 5558888,
+      "email": "hannah@example.com",
+      "isAssigned": false,
+      "isAdmin": false
+    }
+  ],
+
+  "Customer": [
+    {
+      "id": 1,
+      "name": "Dana",
+      "address": "101 First Ave",
+      "phone": 5554444,
+      "email": "dana@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Eli",
+      "address": "202 Second Ave",
+      "phone": 5555555,
+      "email": "eli@example.com"
+    }
+  ],
+  "Order": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "orderTime": "2025-04-30T18:30:00Z",
+      "tableNumber": 5,
+      "status": "Pending",
+      "gratuity": 5,
+      "totalCost": 27,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": null
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "orderTime": "2025-04-30T19:00:00Z",
+      "tableNumber": null,
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 15,
+      "takenByEmployeeId": 3,
+      "deliveredByEmployeeId": null
+    }
+  ],
+  "Size": [
+    { "id": 1, "name": "Kids", "price": 6.0 },
+    { "id": 2, "name": "Small", "price": 10.0 },
+    { "id": 3, "name": "Medium", "price": 12.5 },
+    { "id": 4, "name": "Large", "price": 15.0 },
+    { "id": 5, "name": "X Large", "price": 18.0 }
+  ],
+  "Cheese": [
+    { "id": 1, "name": "Mozzarella" },
+    { "id": 2, "name": "Buffalo Mozzarella" },
+    { "id": 3, "name": "Four Cheese" },
+    { "id": 4, "name": "Vegan" },
+    { "id": 5, "name": "Ricotta" },
+    { "id": 6, "name": "None" }
+  ],
+  "Sauce": [
+    { "id": 1, "name": "Marinara" },
+    { "id": 2, "name": "Arrabbiata" },
+    { "id": 3, "name": "Garlic White" },
+    { "id": 4, "name": "Diavolo" },
+    { "id": 5, "name": "None" }
+  ],
+  "Topping": [
+    { "id": 1, "name": "Sausage", "price": 1.0 },
+    { "id": 2, "name": "Pepperoni", "price": 1.0 },
+    { "id": 3, "name": "Mushroom", "price": 0.75 },
+    { "id": 4, "name": "Onion", "price": 0.5 },
+    { "id": 5, "name": "Green pepper", "price": 0.5 },
+    { "id": 6, "name": "Black olive", "price": 0.75 },
+    { "id": 7, "name": "Basil", "price": 0.5 },
+    { "id": 8, "name": "Extra cheese", "price": 1.0 }
+  ],
+  "Pizza": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "sizeId": 3,
+      "sauceId": 1,
+      "cheeseId": 1,
+      "totalCost": 13.75
+    },
+    {
+      "id": 2,
+      "orderId": 1,
+      "sizeId": 2,
+      "sauceId": 2,
+      "cheeseId": 3,
+      "totalCost": 13.25
+    },
+    {
+      "id": 3,
+      "orderId": 2,
+      "sizeId": 4,
+      "sauceId": 3,
+      "cheeseId": 4,
+      "totalCost": 15.0
+    }
+  ],
+  "pizzaTopping": [
+    { "id": 1, "pizzaId": 1, "toppingId": 2 },
+    { "id": 2, "pizzaId": 1, "toppingId": 3 },
+    { "id": 3, "pizzaId": 2, "toppingId": 1 },
+    { "id": 4, "pizzaId": 2, "toppingId": 8 },
+    { "id": 5, "pizzaId": 3, "toppingId": 5 },
+    { "id": 6, "pizzaId": 3, "toppingId": 6 }
+  ]
+}
