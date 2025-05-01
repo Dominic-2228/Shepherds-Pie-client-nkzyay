@@ -3,6 +3,8 @@ import { NavBar } from "../components/Nav/NavBar";
 import { useEffect, useState } from "react";
 import { Employees } from "../components/Employees";
 import { EmployeeEdit } from "../components/EmployeeEdit";
+import {Home } from"../components/Home/Home"
+import { CreateOrder } from "../components/Orders/CreateOrder";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -20,10 +22,15 @@ export const ApplicationViews = () => {
           <>
             <NavBar />
             <Outlet />
+  
           </>
         }
       >
-        <Route index element={<>Render Home Page here</>} />
+        <Route index element={<Home />} />
+        <Route
+          path="/CreateOrder"
+          element={< CreateOrder />}
+        />
         <Route
           path="/employees"
           element={<Employees currentUser={currentUser} />}
