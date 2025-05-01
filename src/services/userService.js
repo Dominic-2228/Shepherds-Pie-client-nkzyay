@@ -13,3 +13,9 @@ export const createUser = (user) => {
     body: JSON.stringify(user),
   }).then((res) => res.json());
 };
+
+export const getUserById = (currentUserId) => {
+  return fetch(`http://localhost:8088/employee?id=${currentUserId}`).then(
+    (res) => res.json()
+  );
+};

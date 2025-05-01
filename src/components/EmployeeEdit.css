@@ -1,0 +1,44 @@
+.edit-form {
+  display: flex;
+  width: 60%;
+  margin: 5rem auto;
+  border: 1px solid gray;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+.employee-section {
+  padding: 15px;
+  display: flex;
+  width: fit-content;
+  flex: 1;
+
+  flex-direction: column;
+  /* border: 5px solid black; */
+}
+
+.employee-input {
+  width: 140%;
+  padding: 10px;
+  border-radius: 12px;
+}
+.employee-section label {
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 50px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.button-container {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+}
