@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getUserById } from "../services/userService";
-import { postEditedEmployee } from "../services/employeeService";
+import { getUserById } from "../../services/userService";
+import { postEditedEmployee } from "../../services/employeeService";
 import "./EmployeeEdit.css";
 import { useNavigate, useParams } from "react-router-dom";
 

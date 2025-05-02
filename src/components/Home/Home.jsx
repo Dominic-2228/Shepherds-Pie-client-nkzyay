@@ -9,7 +9,10 @@ export const Home = ({}) => {
       </div>
 
       <div className="center-container">
-        <img src="https://ik.imagekit.io/b0xq0alh4/Dom-ino's%20logo.png?updatedAt=1746128444236" />
+        <img
+          id="dom-img"
+          src="https://ik.imagekit.io/b0xq0alh4/Dom-ino's%20logo.png?updatedAt=1746128444236"
+        />
       </div>
 
       <div className="center-container">

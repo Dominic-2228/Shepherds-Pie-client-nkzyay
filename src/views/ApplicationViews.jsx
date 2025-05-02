@@ -2,10 +2,11 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import { NavBar } from "../components/Nav/NavBar";
 import { useEffect, useState } from "react";
 import { Employees } from "../components/Employees";
-import { EmployeeEdit } from "../components/EmployeeEdit";
+import { EmployeeEdit } from "../components/Forms/EmployeeEdit.jsx";
 import { Home } from "../components/Home/Home";
 import { CreateOrder } from "../components/Orders/CreateOrder";
 import { ViewOrder } from "../components/viewOrder/ViewOrder.jsx";
+import { CreatePizza } from "../components/Forms/CreatePizza.jsx";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -37,10 +38,8 @@ export const ApplicationViews = () => {
           path="/sales"
           element={<>Render Sales Report Component here</>}
         />
-        <Route
-          path="/orders"
-          element={<ViewOrder/>}
-        />
+        <Route path="/orders" element={<ViewOrder />} />
+        <Route path="/CreatePizza" element={<CreatePizza />} />
       </Route>
     </Routes>
   );
