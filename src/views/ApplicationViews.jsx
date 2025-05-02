@@ -1,7 +1,7 @@
 import { Routes, Route, Outlet } from "react-router-dom";
 import { NavBar } from "../components/Nav/NavBar";
 import { useEffect, useState } from "react";
-import {Home } from"../components/Home/Home"
+import { Home } from"../components/Home/Home"
 import { CreateOrder } from "../components/Orders/CreateOrder";
 
 export const ApplicationViews = () => {

@@ -1,10 +1,39 @@
 
 import { useState } from "react"
 import "./Order.css"
+import { useNavigate } from "react-router"
+import { createOrder } from "../../services/CustomerService"
 
 export const CreateOrder = () => {
 
     const [customerDetails, setCustomerDetails] = useState()
+    const navigate = useNavigate()
+
+    const handleSave = (event) => {
+        event.preventDefault()
+        const handleSave = (event) => {
+            event.preventDefault()
+            if (order.deliveredByEmployeeId != 0 ) {
+                const newOrder = {
+                    orderTime: "",
+                    name: order.name,
+                    tableNumber: order.table,
+                    address: order.address,
+                    phone: order.phone,
+                    email: order.email,
+                    status: "",
+                    gratuity: 0,
+                    totalCost: 0,
+                    takenByEmployeeId: currentUser.id,
+                    deliveredByEmployeeId: null
+                }
+                createOrder(newOrder).then(() => {
+                    navigate('/OrderDetails')
+                })
+            } else {
+                window.alert("Please fill out all details")
+            }    }
+    }
 
     return (
         <form className="customer-info">
