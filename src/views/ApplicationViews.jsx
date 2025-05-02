@@ -3,6 +3,7 @@ import { NavBar } from "../components/Nav/NavBar";
 import { useEffect, useState } from "react";
 import {Home } from"../components/Home/Home"
 import { CreateOrder } from "../components/Orders/CreateOrder";
+import { ViewOrder } from "../components/viewOrder/ViewOrder.jsx";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -39,7 +40,7 @@ export const ApplicationViews = () => {
         />
         <Route
           path="/orders"
-          element={<>Render Order List/Today's Orders Component here</>}
+          element={<ViewOrder/>}
         />
       </Route>
     </Routes>
