@@ -1,11 +1,11 @@
 export const getUserByEmail = (email) => {
-  return fetch(`http://localhost:8088/employee?email=${email}`).then((res) =>
+  return fetch(`http://localhost:8088/employees?email=${email}`).then((res) =>
     res.json()
   );
 };
 
 export const createUser = (user) => {
-  return fetch("http://localhost:8088/employee", {
+  return fetch("http://localhost:8088/employees", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -15,7 +15,7 @@ export const createUser = (user) => {
 };
 
 export const getUserById = (currentUserId) => {
-  return fetch(`http://localhost:8088/employee?id=${currentUserId}`).then(
+  return fetch(`http://localhost:8088/employees?id=${currentUserId}`).then(
     (res) => res.json()
   );
 };

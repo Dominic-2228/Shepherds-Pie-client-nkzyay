@@ -18,7 +18,7 @@
   font-size: 1rem;
 }
 
-fieldset {
+.order-fieldset {
   border: 1px solid #ccc;
   padding: 1rem 2rem;
   width: 300px;
