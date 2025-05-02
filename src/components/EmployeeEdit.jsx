@@ -92,7 +92,7 @@ export const EmployeeEdit = () => {
           ></input>
         </div>
         <div className="button-container">
-          <button className="button" onClick={handleSave}>
+          <button className="employee-save-button" onClick={handleSave}>
             Save Changes
           </button>
         </div>

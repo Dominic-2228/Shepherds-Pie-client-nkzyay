@@ -26,8 +26,8 @@ export const Employees = ({ currentUser }) => {
       </div>
       {employees.map((employeeObj) => {
         return (
-          <Link to={`/employees/${employeeObj.id}`}>
-            <div className="employee" key={employeeObj.id}>
+          <Link key={employeeObj.id} to={`/employees/${employeeObj.id}`}>
+            <div className="employee">
               <div className="employee-details">
                 <span className="detail-header">Name:</span> {employeeObj.name}
               </div>
