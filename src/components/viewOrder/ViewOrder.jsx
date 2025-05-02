@@ -1,12 +1,13 @@
+import "./ViewOrder.css"
 import { useEffect, useState } from "react";
 import { getOrdersWithCustomer } from "../../services/getOrders.jsx";
-import { use } from "react";
+
 
 export const ViewOrder = () => {
   let orderMonthArr = []
   const [orders, setOrders] = useState([]);
   const [orderDate, setOrderDate] = useState([]);
-  const [month, setMonth] = useState(0)
+  const [month, setMonth] = useState(null)
 
   useEffect(() => {
     getOrdersWithCustomer().then(setOrders);
@@ -38,7 +39,7 @@ export const ViewOrder = () => {
 
 
   return (
-    <div>
+    <div className="view-orders-container">
       <h2>Today's Orders</h2>
       <select onChange={(e) => setMonth(parseInt(e.target.value))}>
         <option>Month</option>

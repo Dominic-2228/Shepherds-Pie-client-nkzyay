@@ -280,6 +280,28 @@
     "totalCost": 25,
     "takenByEmployeeId": 2,
     "deliveredByEmployeeId": 4
+  },
+  {
+    "id": 10,
+    "customerId": 4,
+    "orderTime": "2025-05-02T14:15:00Z",
+    "tableNumber": 2,
+    "status": "Pending",
+    "gratuity": 4,
+    "totalCost": 22,
+    "takenByEmployeeId": 1,
+    "deliveredByEmployeeId": null
+  },
+  {
+    "id": 11,
+    "customerId": 5,
+    "orderTime": "2025-05-02T17:45:00Z",
+    "tableNumber": 6,
+    "status": "In Progress",
+    "gratuity": 6,
+    "totalCost": 30,
+    "takenByEmployeeId": 3,
+    "deliveredByEmployeeId": 2
   }
 ],
   "sizes": [
