@@ -2,16 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15vh; /* Full viewport height */
   width: 100vw;
-  
+  margin-top: 3rem;
 }
 
 img {
   height: 15em;
 }
 
-img:hover {
+#dom-img:hover {
   height: 16em;
 }
 .home-btn {

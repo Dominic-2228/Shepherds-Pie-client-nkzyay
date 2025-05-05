@@ -2,8 +2,8 @@
   "employees": [
     {
       "id": 1,
-      "name": "Alice",
-      "address": "123 Main St",
+      "name": "Alice Thompson",
+      "address": "123 Main St, Springfield, IL 62704",
       "phone": 5551111,
       "email": "alice@example.com",
       "isAssigned": false,
@@ -11,17 +11,17 @@
     },
     {
       "id": 2,
-      "name": "Bob",
-      "address": "456 Side St",
-      "phone": 5552222,
+      "name": "Bob Reynolds",
+      "address": "456 Side St, Madison, WI 53703",
+      "phone": 4444444,
       "email": "bob@example.com",
       "isAssigned": false,
       "isAdmin": true
     },
     {
       "id": 3,
-      "name": "Charlie",
-      "address": "789 Broad St",
+      "name": "Charlie Nguyen",
+      "address": "789 Broad St, Columbus, OH 43215",
       "phone": 5553333,
       "email": "charlie@example.com",
       "isAssigned": false,
@@ -29,8 +29,8 @@
     },
     {
       "id": 4,
-      "name": "Diana",
-      "address": "321 Oak St",
+      "name": "Diana Foster",
+      "address": "321 Oak St, Austin, TX 73301",
       "phone": 5554444,
       "email": "diana@example.com",
       "isAssigned": false,
@@ -38,8 +38,8 @@
     },
     {
       "id": 5,
-      "name": "Ethan",
-      "address": "654 Pine St",
+      "name": "Ethan Morales",
+      "address": "654 Pine St, Denver, CO 80203",
       "phone": 5555555,
       "email": "ethan@example.com",
       "isAssigned": false,
@@ -47,8 +47,8 @@
     },
     {
       "id": 6,
-      "name": "Fiona",
-      "address": "987 Cedar St",
+      "name": "Fiona Zhang",
+      "address": "987 Cedar St, Seattle, WA 98101",
       "phone": 5556666,
       "email": "fiona@example.com",
       "isAssigned": false,
@@ -56,24 +56,23 @@
     },
     {
       "id": 7,
-      "name": "George",
-      "address": "135 Maple St",
+      "name": "George Patel",
+      "address": "135 Maple St, Portland, OR 97205",
       "phone": 5557777,
-      "email": "george@example.com",
+      "email": "georgeyboy@example.com",
       "isAssigned": false,
       "isAdmin": false
     },
     {
       "id": 8,
-      "name": "Hannah",
-      "address": "246 Birch St",
+      "name": "Hannah Romero",
+      "address": "246 Birch St, Phoenix, AZ 85004",
       "phone": 5558888,
       "email": "hannah@example.com",
       "isAssigned": false,
       "isAdmin": false
     }
   ],
-
   "customers": [
   {
     "id": 1,
@@ -556,36 +555,121 @@
   }
 ],
   "sizes": [
-    { "id": 1, "name": "Kids", "price": 6.0 },
-    { "id": 2, "name": "Small", "price": 10.0 },
-    { "id": 3, "name": "Medium", "price": 12.5 },
-    { "id": 4, "name": "Large", "price": 15.0 },
-    { "id": 5, "name": "X Large", "price": 18.0 }
+    {
+      "id": 1,
+      "name": "Kids",
+      "price": 6
+    },
+    {
+      "id": 2,
+      "name": "Small",
+      "price": 10
+    },
+    {
+      "id": 3,
+      "name": "Medium",
+      "price": 12.5
+    },
+    {
+      "id": 4,
+      "name": "Large",
+      "price": 15
+    },
+    {
+      "id": 5,
+      "name": "X Large",
+      "price": 18
+    }
   ],
   "cheeses": [
-    { "id": 1, "name": "Mozzarella" },
-    { "id": 2, "name": "Buffalo Mozzarella" },
-    { "id": 3, "name": "Four Cheese" },
-    { "id": 4, "name": "Vegan" },
-    { "id": 5, "name": "Ricotta" },
-    { "id": 6, "name": "None" }
+    {
+      "id": 1,
+      "name": "Mozzarella"
+    },
+    {
+      "id": 2,
+      "name": "Buffalo Mozzarella"
+    },
+    {
+      "id": 3,
+      "name": "Four Cheese"
+    },
+    {
+      "id": 4,
+      "name": "Vegan"
+    },
+    {
+      "id": 5,
+      "name": "Ricotta"
+    },
+    {
+      "id": 6,
+      "name": "None"
+    }
   ],
   "sauces": [
-    { "id": 1, "name": "Marinara" },
-    { "id": 2, "name": "Arrabbiata" },
-    { "id": 3, "name": "Garlic White" },
-    { "id": 4, "name": "Diavolo" },
-    { "id": 5, "name": "None" }
+    {
+      "id": 1,
+      "name": "Marinara"
+    },
+    {
+      "id": 2,
+      "name": "Arrabbiata"
+    },
+    {
+      "id": 3,
+      "name": "Garlic White"
+    },
+    {
+      "id": 4,
+      "name": "Diavolo"
+    },
+    {
+      "id": 5,
+      "name": "None"
+    }
   ],
   "toppings": [
-    { "id": 1, "name": "Sausage", "price": 1.0 },
-    { "id": 2, "name": "Pepperoni", "price": 1.0 },
-    { "id": 3, "name": "Mushroom", "price": 0.75 },
-    { "id": 4, "name": "Onion", "price": 0.5 },
-    { "id": 5, "name": "Green pepper", "price": 0.5 },
-    { "id": 6, "name": "Black olive", "price": 0.75 },
-    { "id": 7, "name": "Basil", "price": 0.5 },
-    { "id": 8, "name": "Extra cheese", "price": 1.0 }
+    {
+      "id": 1,
+      "name": "Sausage",
+      "price": 1
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni",
+      "price": 1
+    },
+    {
+      "id": 3,
+      "name": "Mushroom",
+      "price": 0.75
+    },
+    {
+      "id": 4,
+      "name": "Onion",
+      "price": 0.5
+    },
+    {
+      "id": 5,
+      "name": "Green pepper",
+      "price": 0.5
+    },
+    {
+      "id": 6,
+      "name": "Black olives",
+      "price": 0.75
+    },
+    {
+      "id": 7,
+      "name": "Basil",
+      "price": 0.5
+    },
+    {
+      "id": 8,
+      "name": "Extra cheese",
+      "price": 1
+    }
   ],
   "pizzas": [
     {
@@ -610,15 +694,85 @@
       "sizeId": 4,
       "sauceId": 3,
       "cheeseId": 4,
-      "totalCost": 15.0
+      "totalCost": 15
+    },
+    {
+      "orderId": 1,
+      "sizeId": 1,
+      "sauceId": 1,
+      "cheeseId": 1,
+      "totalCost": 8.75,
+      "id": 4
+    },
+    {
+      "orderId": 1,
+      "sizeId": 1,
+      "sauceId": 1,
+      "cheeseId": 2,
+      "totalCost": 8.25,
+      "id": 5
     }
   ],
   "pizzaToppings": [
-    { "id": 1, "pizzaId": 1, "toppingId": 2 },
-    { "id": 2, "pizzaId": 1, "toppingId": 3 },
-    { "id": 3, "pizzaId": 2, "toppingId": 1 },
-    { "id": 4, "pizzaId": 2, "toppingId": 8 },
-    { "id": 5, "pizzaId": 3, "toppingId": 5 },
-    { "id": 6, "pizzaId": 3, "toppingId": 6 }
+    {
+      "id": 1,
+      "pizzaId": 1,
+      "toppingId": 2
+    },
+    {
+      "id": 2,
+      "pizzaId": 1,
+      "toppingId": 3
+    },
+    {
+      "id": 3,
+      "pizzaId": 2,
+      "toppingId": 1
+    },
+    {
+      "id": 4,
+      "pizzaId": 2,
+      "toppingId": 8
+    },
+    {
+      "id": 5,
+      "pizzaId": 3,
+      "toppingId": 5
+    },
+    {
+      "id": 6,
+      "pizzaId": 3,
+      "toppingId": 6
+    },
+    {
+      "pizzaId": 4,
+      "toppingId": 1,
+      "id": 7
+    },
+    {
+      "pizzaId": 4,
+      "toppingId": 2,
+      "id": 8
+    },
+    {
+      "pizzaId": 4,
+      "toppingId": 3,
+      "id": 9
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 1,
+      "id": 10
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 3,
+      "id": 11
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 4,
+      "id": 12
+    }
   ]
 }

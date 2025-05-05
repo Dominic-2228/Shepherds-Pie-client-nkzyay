@@ -1,6 +1,6 @@
 import "./ViewOrder.css"
 import { useEffect, useState } from "react";
-import { getOrdersWithCustomer } from "../../services/getOrders.jsx";
+import { getOrdersWithCustomer } from "../../services/orderService.jsx";
 
 
 export const ViewOrder = () => {
@@ -74,7 +74,7 @@ export const ViewOrder = () => {
         .filter((order) => month > 0 ? new Date(order.orderTime).getUTCMonth() + 1 === month 
         : isDate(order.orderTime))
         .map((order) => (
-          <fieldset key={order.id} style={{ marginBottom: "1rem" }}>
+          <fieldset className="order-fieldset" key={order.id} style={{ marginBottom: "1rem" }}>
             <div>
               <h3>Order Time: {order.orderTime}</h3>
             </div>
