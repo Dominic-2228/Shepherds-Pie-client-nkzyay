@@ -13,7 +13,6 @@ export const ViewOrder = () => {
     getOrdersWithCustomer().then(setOrders);
   }, []);
 
-  useEffect(() => {}, []);
 
   const isDate = (dateString) => {
     const orderDate = new Date(dateString);
@@ -34,30 +33,43 @@ export const ViewOrder = () => {
       setOrderDate(orderMonthArr)
     });
   }, [orders])
+
+  const formatDate = (givenDate) => {
+    const date = new Date(givenDate)
+    return fmtDate = date.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+    })
+  }
  
   
 
 
   return (
     <div className="view-orders-container">
-      <h2>Today's Orders</h2>
+      <div className="header-row">
       <select onChange={(e) => setMonth(parseInt(e.target.value))}>
         <option>Month</option>
           {[
             ...new Set(
-              orders.map((order) => new Date(order.orderTime).getUTCMonth() + 1)
+              orders.map((order) => new Date(order.orderTime).getUTCMonth())
             ),
           ]
             .sort((a, b) => a - b)
             .map((month, index) => {
+              const monthName = new Date(0, month).toLocaleString("en-US", {
+        month: "long",
+      })
               return (
-                <option key={index} value={month}>
+                <option key={index} value={month + 1}>
                   {" "}
-                  {month}
+                  {monthName}
                 </option>
               );
             })}
       </select>
+      <h2 className="header-center">Today's Orders</h2>
+      </div>
       {orders
         .filter((order) => month > 0 ? new Date(order.orderTime).getUTCMonth() + 1 === month 
         : isDate(order.orderTime))
