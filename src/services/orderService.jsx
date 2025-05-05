@@ -6,6 +6,6 @@ export const getOrdersWithCustomer = () => {
   return fetch("http://localhost:8088/orders?_expand=customer").then (res => res.json())
 }
 
-export const getOrderWithMatchingMonth = () => {
-  return fetch("http://localhost:8088/orders")
+export const getOrderWithMatchingMonth = (id) => {
+  return fetch(`http://localhost:8088/orders?monthId=${id}&_expand=customer`).then(res => res.json())
 }
