@@ -7,6 +7,7 @@ import { Home } from "../components/Home/Home";
 import { CreateOrder } from "../components/Orders/CreateOrder";
 import { ViewOrder } from "../components/viewOrder/ViewOrder.jsx";
 import { CreatePizza } from "../components/Forms/CreatePizza.jsx";
+import { OrderDetails } from "../components/Orders/OrderDetails.jsx";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -40,6 +41,7 @@ export const ApplicationViews = () => {
         />
         <Route path="/orders" element={<ViewOrder />} />
         <Route path="/CreatePizza" element={<CreatePizza />} />
+        <Route path="/OrderDetails" element={<OrderDetails />} />
       </Route>
     </Routes>
   );

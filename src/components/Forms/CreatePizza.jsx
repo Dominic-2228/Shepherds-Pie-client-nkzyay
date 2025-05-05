@@ -76,18 +76,24 @@ export const CreatePizza = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    postPizza(pizza)
-      .then((postedPizza) => {
-        selectedToppings.map((toppingId) => {
-          return postPizzaTopping({
-            pizzaId: postedPizza.id,
-            toppingId: toppingId,
+
+    if (pizza.sizeId && pizza.sauceId && pizza.cheeseId) {
+      postPizza(pizza)
+        .then((postedPizza) => {
+          selectedToppings.map((toppingId) => {
+            return postPizzaTopping({
+              pizzaId: postedPizza.id,
+              toppingId: toppingId,
+            });
           });
+        })
+        .then(() => {
+          window.alert("Pizza added to order");
+          window.location.reload();
         });
-      })
-      .then(() => {
-        window.location.reload();
-      });
+    } else {
+      window.alert("Please complete all required fields");
+    }
   };
   return (
     <form className="create-pizza-form">
