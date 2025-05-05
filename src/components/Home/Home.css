@@ -10,7 +10,7 @@
   height: 15em;
 }
 
-dom logo, img:hover {
+#dom-img:hover {
   height: 16em;
 }
 .home-btn {

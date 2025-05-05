@@ -4,7 +4,8 @@ import "./Order.css"
 import { useNavigate } from "react-router"
 import { createOrder, createCustomer } from "../../services/CustomerService"
 
-export const CreateOrder = ({ currentOrder, currentUser }) => {
+
+export const CreateOrder = ({ currentUser }) => {
 
     const [customerDetails, setCustomerDetails] = useState({
         name: "",
@@ -22,29 +23,32 @@ export const CreateOrder = ({ currentOrder, currentUser }) => {
 
     const handleSave = (event) => {
         event.preventDefault()
-
-        const customer = createCustomer(customerDetails)
+    
         if (customerDetails.name && customerDetails.address && customerDetails.phone && customerDetails.email) {
+                createCustomer(customerDetails).then((data) => {
+                    const newOrder = {
+                        customerId: data.id,
+                        orderTime: new Date().toISOString(),
+                        tableNumber: customerDetails.tableNumber || null,
+                        status: "Pending",
+                        gratuity: 0,
+                        totalCost: 0,
+                        takenByEmployeeId: currentUser.id,
+                        deliveredByEmployeeId: null
+                    }
 
-            const newOrder = {
-                customerId: customer.id,
-                orderTime: new Date().toISOString(),
-                tableNumber: customerDetails.tableNumber || null,
-                status: "Pending",
-                gratuity: 0,
-                totalCost: 0,
-                takenByEmployeeId: currentUser.id,
-                deliveredByEmployeeId: null
-            }
-            createOrder(newOrder).then(() => {
-                navigate(`/OrderDetails/${order.id}`)
-            })
-
-        } else {
-            window.alert("Order creation failed.")
+                    createOrder(newOrder).then((customerObj) => {
+                        navigate(`/OrderDetails/${customerObj.id}`)
+                    })
+                    
+                })
+    
+                
+    
+            } else {
+            window.alert("Please complete all required customer fields.")
         }
     }
-
     return (
         <form className="customer-info">
             <h2>Customer Info</h2>

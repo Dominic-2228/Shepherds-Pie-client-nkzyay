@@ -2,11 +2,12 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import { NavBar } from "../components/Nav/NavBar";
 import { useEffect, useState } from "react";
 import { Employees } from "../components/Employees";
-import { EmployeeEdit } from "../components/EmployeeEdit";
+import { EmployeeEdit } from "../components/Forms/EmployeeEdit.jsx";
 import { Home } from "../components/Home/Home";
 import { CreateOrder } from "../components/Orders/CreateOrder";
 import { ViewOrder } from "../components/viewOrder/ViewOrder.jsx";
 import { OrderDetails } from "../components/Orders/OrderDetails.jsx";
+import { CreatePizza } from "../components/Forms/CreatePizza.jsx";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -28,8 +29,8 @@ export const ApplicationViews = () => {
         }
       >
         <Route index element={<Home />} />
-        <Route path="/CreateOrder" element={<CreateOrder />} />
-        <Route path= "/OrderDetails/:orderId" element={ <OrderDetails />} />
+        <Route path="/CreateOrder" element={<CreateOrder currentUser={currentUser} />} />
+        <Route path= "/OrderDetails/:orderId" element={ <OrderDetails currentUser={currentUser} />} />
 
         <Route
           path="/employees"
@@ -39,12 +40,10 @@ export const ApplicationViews = () => {
         <Route
           path="/sales"
           element={<>Render Sales Report Component here</>}
-          />
-        <Route
-          path="/orders"
-          element={<ViewOrder/>}
-          />
-          </Route>
+        />
+        <Route path="/orders" element={<ViewOrder />} />
+        <Route path="/CreatePizza" element={<CreatePizza />} />
+      </Route>
     </Routes>
   );
 };

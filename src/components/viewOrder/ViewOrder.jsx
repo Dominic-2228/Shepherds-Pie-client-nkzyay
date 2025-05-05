@@ -1,6 +1,6 @@
 import "./ViewOrder.css"
 import { useEffect, useState } from "react";
-import { getOrdersWithCustomer } from "../../services/getOrders.jsx";
+import { getOrdersWithCustomer } from "../../services/orderService.jsx";
 
 
 export const ViewOrder = () => {

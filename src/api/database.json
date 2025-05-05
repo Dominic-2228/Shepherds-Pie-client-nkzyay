@@ -188,36 +188,20 @@
       "id": 16
     },
     {
-      "name": "Tom Selleck",
-      "address": "1822 Mustache Street",
-      "phone": "777-777-7777",
-      "email": "mustacheyouaquestion@tomselleck.tom",
-      "tableNumber": "99",
-      "id": 17
+      "name": "Montaigne",
+      "address": "88899 Wallaby Way",
+      "phone": "9317874213",
+      "email": "lkasjdlfkjasdlk@partycity",
+      "tableNumber": "2",
+      "id": 40
     },
     {
-      "name": "Shakira Shakira",
-      "address": "1822 Mustache Street",
-      "phone": "999-777-7777",
-      "email": "hipsdontlie@bing.com",
-      "tableNumber": "13",
-      "id": 18
-    },
-    {
-      "name": "Shakira Shakira",
-      "address": "1822 Mustache Street",
-      "phone": "999-777-7777",
-      "email": "hipsdontlie@bing.com",
-      "tableNumber": "13",
-      "id": 19
-    },
-    {
-      "name": "",
-      "address": "",
-      "phone": "",
-      "email": "",
+      "name": "Shirley Beaty",
+      "address": "827 Beaty rd",
+      "phone": "93148422332",
+      "email": "SHIRTLEY@DSAFDLASFJL;AS",
       "tableNumber": "",
-      "id": 20
+      "id": 41
     }
   ],
   "orders": [
@@ -341,6 +325,68 @@
       "totalCost": 30,
       "takenByEmployeeId": 3,
       "deliveredByEmployeeId": 2
+    },
+    {
+      "customerId": 36,
+      "orderTime": "2025-05-05T18:59:21.530Z",
+      "tableNumber": "32",
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 0,
+      "deliveredByEmployeeId": null,
+      "id": 12
+    },
+    {
+      "customerId": 37,
+      "orderTime": "2025-05-05T18:59:52.026Z",
+      "tableNumber": "8",
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 0,
+      "deliveredByEmployeeId": null,
+      "id": 13
+    },
+    {
+      "customerId": 38,
+      "orderTime": "2025-05-05T19:04:08.734Z",
+      "tableNumber": " 99999999",
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 0,
+      "deliveredByEmployeeId": null,
+      "id": 14
+    },
+    {
+      "customerId": 39,
+      "orderTime": "2025-05-05T19:04:34.899Z",
+      "tableNumber": " 99999999",
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 0,
+      "deliveredByEmployeeId": null,
+      "id": 15
+    },
+    {
+      "customerId": 40,
+      "orderTime": "2025-05-05T19:07:02.711Z",
+      "tableNumber": "2",
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 0,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": null,
+      "id": 16
+    },
+    {
+      "customerId": 41,
+      "orderTime": "2025-05-05T19:15:09.706Z",
+      "tableNumber": null,
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 0,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": null,
+      "id": 17
     }
   ],
   "sizes": [
@@ -446,7 +492,7 @@
     },
     {
       "id": 6,
-      "name": "Black olive",
+      "name": "Black olives",
       "price": 0.75
     },
     {
@@ -484,6 +530,22 @@
       "sauceId": 3,
       "cheeseId": 4,
       "totalCost": 15
+    },
+    {
+      "orderId": 1,
+      "sizeId": 1,
+      "sauceId": 1,
+      "cheeseId": 1,
+      "totalCost": 8.75,
+      "id": 4
+    },
+    {
+      "orderId": 1,
+      "sizeId": 1,
+      "sauceId": 1,
+      "cheeseId": 2,
+      "totalCost": 8.25,
+      "id": 5
     }
   ],
   "pizzaToppings": [
@@ -516,6 +578,36 @@
       "id": 6,
       "pizzaId": 3,
       "toppingId": 6
+    },
+    {
+      "pizzaId": 4,
+      "toppingId": 1,
+      "id": 7
+    },
+    {
+      "pizzaId": 4,
+      "toppingId": 2,
+      "id": 8
+    },
+    {
+      "pizzaId": 4,
+      "toppingId": 3,
+      "id": 9
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 1,
+      "id": 10
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 3,
+      "id": 11
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 4,
+      "id": 12
     }
   ]
 }
