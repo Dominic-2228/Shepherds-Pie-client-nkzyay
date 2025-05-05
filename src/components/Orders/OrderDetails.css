@@ -12,17 +12,30 @@
 .customer-info {
   display: flex;
   flex-direction: column;
+  width: 50%;
+  padding: 20px;
 }
 
+.customer-detail-title .customer-detail-info {
+  display: flex;
+}
 .order-section {
   border-top: 1px solid black;
   padding: 30px 0;
+  display: flex;
+  flex-direction: column;
 }
 .customer-detail {
   display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  font-weight: bold;
 }
 .pizza-button {
   width: 30%;
   display: flex;
+  align-items: center;
   justify-content: center;
+  border: none;
+  line-height: 1;
 }

@@ -2,7 +2,7 @@
 import { useState } from "react"
 import "./Order.css"
 
-export const CreateOrder = () => {
+export const CreateOrder = ({currentUser}) => {
 
     const [customerDetails, setCustomerDetails] = useState()
 
