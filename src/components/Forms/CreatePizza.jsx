@@ -8,6 +8,7 @@ import {
   postPizza,
   postPizzaTopping,
 } from "../../services/pizzaService";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const CreatePizza = () => {
   const [sizes, setSizes] = useState([]);
@@ -17,8 +18,11 @@ export const CreatePizza = () => {
   const [selectedToppings, setSelectedToppings] = useState([]);
   const [cost, setCost] = useState(0);
 
+  const { orderId } = useParams();
+  const navigate = useNavigate();
+
   const [pizza, setPizza] = useState({
-    orderId: 1,
+    orderId: orderId,
     sizeId: 0,
     sauceId: 0,
     cheeseId: 0,
@@ -76,22 +80,27 @@ export const CreatePizza = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    postPizza(pizza)
-      .then((postedPizza) => {
-        selectedToppings.map((toppingId) => {
-          return postPizzaTopping({
-            pizzaId: postedPizza.id,
-            toppingId: toppingId,
+
+    if (pizza.sizeId && pizza.sauceId && pizza.cheeseId) {
+      postPizza(pizza)
+        .then((postedPizza) => {
+          selectedToppings.map((toppingId) => {
+            return postPizzaTopping({
+              pizzaId: postedPizza.id,
+              toppingId: toppingId,
+            });
           });
+        })
+        .then(() => {
+          navigate(`/OrderDetails/${orderId}`);
         });
-      })
-      .then(() => {
-        window.location.reload();
-      });
+    } else {
+      window.alert("Please complete all required fields");
+    }
   };
   return (
     <form className="create-pizza-form">
-      <h1>Order # </h1>
+      <h1>Order # {orderId}</h1>
       <h2>Create Pizza</h2>
       <div id="selections-and-img">
         <div id="pizza-selections">

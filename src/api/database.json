@@ -180,103 +180,15 @@
       "email": "victor@example.com"
     },
     {
-      "name": "Dolly Parton",
-      "address": "1969 Dollywood Rd",
-      "phone": "9319319319",
-      "email": "helloDolly@dollywood.com",
-      "tableNumber": "39",
+      "name": "Luke Davids",
+      "address": "111 Lukey Lane",
+      "phone": "111111",
+      "email": "lukey@lukeylane.com",
+      "tableNumber": "",
       "id": 16
-    },
-    {
-      "name": "safsaf",
-      "address": "sadfasf",
-      "phone": "asdfas",
-      "email": "fsdfsadf",
-      "tableNumber": "",
-      "id": 17
-    },
-    {
-      "name": "Jolene",
-      "address": "999 wallaby way",
-      "phone": "999-999-9999",
-      "email": "jolenegonnastealyourman@hotmail.com",
-      "tableNumber": "",
-      "id": 18
-    },
-    {
-      "name": "Charlie Day",
-      "address": "Philadelphia",
-      "phone": "999999999",
-      "email": "itssunny@neopets.com",
-      "tableNumber": "",
-      "id": 19
-    },
-    {
-      "name": "fdsafkldsafjlk",
-      "address": "kdkfajlsdkfj",
-      "phone": "lkjdfaslkjflasdk",
-      "email": "lkdjfasldkfjasldk",
-      "tableNumber": "",
-      "id": 20
-    },
-    {
-      "name": "Mark Scout",
-      "address": "999 Lumon Way",
-      "phone": "999-999-9999",
-      "email": "mark@lumon.lu",
-      "tableNumber": "",
-      "id": 21
     }
   ],
   "orders": [
-    {
-      "id": 1,
-      "customerId": 1,
-      "orderTime": "2025-05-01T18:30:00Z",
-      "tableNumber": 5,
-      "status": "Pending",
-      "gratuity": 5,
-      "totalCost": 27,
-      "takenByEmployeeId": 1,
-      "deliveredByEmployeeId": null,
-      "monthId": 5
-    },
-    {
-      "id": 2,
-      "customerId": 2,
-      "orderTime": "2025-04-30T19:00:00Z",
-      "tableNumber": null,
-      "status": "Pending",
-      "gratuity": 0,
-      "totalCost": 15,
-      "takenByEmployeeId": 3,
-      "deliveredByEmployeeId": null,
-      "monthId": 4
-    },
-    {
-      "id": 3,
-      "customerId": 3,
-      "orderTime": "2025-05-01T12:00:00Z",
-      "tableNumber": 3,
-      "status": "Completed",
-      "gratuity": 3,
-      "totalCost": 20,
-      "takenByEmployeeId": 2,
-      "deliveredByEmployeeId": 4,
-      "monthId": 5
-    },
-    {
-      "id": 4,
-      "customerId": 4,
-      "orderTime": "2025-05-01T14:45:00Z",
-      "tableNumber": 1,
-      "status": "Pending",
-      "gratuity": 4,
-      "totalCost": 33,
-      "takenByEmployeeId": 1,
-      "deliveredByEmployeeId": null,
-      "monthId": 5
-    },
     {
       "id": 5,
       "customerId": 5,
@@ -362,18 +274,6 @@
       "monthId": 5
     },
     {
-      "id": 12,
-      "customerId": 6,
-      "orderTime": "2025-01-15T13:10:00Z",
-      "tableNumber": 1,
-      "status": "Completed",
-      "gratuity": 3,
-      "totalCost": 24,
-      "takenByEmployeeId": 1,
-      "deliveredByEmployeeId": 2,
-      "monthId": 1
-    },
-    {
       "id": 13,
       "customerId": 7,
       "orderTime": "2025-01-22T18:50:00Z",
@@ -388,25 +288,11 @@
     {
       "id": 14,
       "customerId": 8,
-      "orderTime": "2025-02-03T11:30:00Z",
       "tableNumber": 3,
       "status": "Completed",
-      "gratuity": 5,
+      "gratuity": 0,
       "totalCost": 28,
       "takenByEmployeeId": 3,
-      "deliveredByEmployeeId": 1,
-      "monthId": 2
-    },
-    {
-      "id": 15,
-      "customerId": 9,
-      "orderTime": "2025-02-18T16:40:00Z",
-      "tableNumber": 4,
-      "status": "Pending",
-      "gratuity": 0,
-      "totalCost": 14,
-      "takenByEmployeeId": 4,
-      "deliveredByEmployeeId": null,
       "monthId": 2
     },
     {
@@ -603,55 +489,14 @@
     },
     {
       "customerId": 16,
-      "orderTime": "2025-05-05T20:20:00.236Z",
-      "tableNumber": "39",
+      "orderTime": "2025-05-06T19:17:45.071Z",
+      "tableNumber": null,
       "status": "Pending",
       "gratuity": 0,
       "totalCost": 0,
       "takenByEmployeeId": 2,
       "deliveredByEmployeeId": null,
       "id": 32
-    },
-    {
-      "customerId": 19,
-      "orderTime": "2025-05-06T18:43:38.965Z",
-      "tableNumber": null,
-      "status": "Pending",
-      "gratuity": 0,
-      "totalCost": 0,
-      "takenByEmployeeId": 2,
-      "deliveredByEmployeeId": 2,
-      "id": 35,
-      "customer": {
-        "name": "Charlie Day",
-        "address": "Philadelphia",
-        "phone": "999999999",
-        "email": "itssunny@neopets.com",
-        "tableNumber": "",
-        "id": 19
-      }
-    },
-    {
-      "customerId": 20,
-      "orderTime": "2025-05-06T19:03:23.308Z",
-      "tableNumber": null,
-      "status": "Pending",
-      "gratuity": 0,
-      "totalCost": 0,
-      "takenByEmployeeId": 2,
-      "deliveredByEmployeeId": 3,
-      "id": 36
-    },
-    {
-      "customerId": 21,
-      "orderTime": "2025-05-06T19:06:02.438Z",
-      "tableNumber": null,
-      "status": "Out-for-Delivery",
-      "gratuity": 0,
-      "totalCost": 0,
-      "takenByEmployeeId": 2,
-      "deliveredByEmployeeId": 5,
-      "id": 37
     }
   ],
   "sizes": [
@@ -773,106 +618,55 @@
   ],
   "pizzas": [
     {
-      "id": 1,
-      "orderId": 1,
-      "sizeId": 3,
-      "sauceId": 1,
-      "cheeseId": 1,
-      "totalCost": 13.75
+      "orderId": "14",
+      "sizeId": 1,
+      "sauceId": 3,
+      "cheeseId": 3,
+      "totalCost": 7.25,
+      "id": 1
     },
     {
-      "id": 2,
-      "orderId": 1,
+      "orderId": "32",
       "sizeId": 2,
       "sauceId": 2,
-      "cheeseId": 3,
-      "totalCost": 13.25
-    },
-    {
-      "id": 3,
-      "orderId": 2,
-      "sizeId": 4,
-      "sauceId": 3,
-      "cheeseId": 4,
-      "totalCost": 15
-    },
-    {
-      "orderId": 1,
-      "sizeId": 1,
-      "sauceId": 1,
-      "cheeseId": 1,
-      "totalCost": 8.75,
-      "id": 4
-    },
-    {
-      "orderId": 1,
-      "sizeId": 1,
-      "sauceId": 1,
       "cheeseId": 2,
-      "totalCost": 8.25,
-      "id": 5
+      "totalCost": 11.25,
+      "id": 2
+    },
+    {
+      "orderId": "32",
+      "sizeId": 2,
+      "sauceId": 2,
+      "cheeseId": 2,
+      "totalCost": 10.75,
+      "id": 3
     }
   ],
   "pizzaToppings": [
     {
-      "id": 1,
       "pizzaId": 1,
-      "toppingId": 2
+      "toppingId": 3,
+      "id": 1
     },
     {
-      "id": 2,
       "pizzaId": 1,
-      "toppingId": 3
-    },
-    {
-      "id": 3,
-      "pizzaId": 2,
-      "toppingId": 1
-    },
-    {
-      "id": 4,
-      "pizzaId": 2,
-      "toppingId": 8
-    },
-    {
-      "id": 5,
-      "pizzaId": 3,
-      "toppingId": 5
-    },
-    {
-      "id": 6,
-      "pizzaId": 3,
-      "toppingId": 6
-    },
-    {
-      "pizzaId": 4,
-      "toppingId": 1,
-      "id": 7
-    },
-    {
-      "pizzaId": 4,
-      "toppingId": 2,
-      "id": 8
-    },
-    {
-      "pizzaId": 4,
-      "toppingId": 3,
-      "id": 9
-    },
-    {
-      "pizzaId": 5,
-      "toppingId": 1,
-      "id": 10
-    },
-    {
-      "pizzaId": 5,
-      "toppingId": 3,
-      "id": 11
-    },
-    {
-      "pizzaId": 5,
       "toppingId": 4,
-      "id": 12
+      "id": 2
+    },
+    {
+      "pizzaId": 2,
+      "toppingId": 3,
+      "id": 3
+    },
+    {
+      "pizzaId": 2,
+      "toppingId": 4,
+      "id": 4
+    },
+    {
+      "pizzaId": 3,
+      "toppingId": 3,
+      "id": 5
     }
   ]
 }
