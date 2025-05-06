@@ -8,6 +8,9 @@ import { CreateOrder } from "../components/Orders/CreateOrder";
 import { ViewOrder } from "../components/viewOrder/ViewOrder.jsx";
 import { OrderDetails } from "../components/Orders/OrderDetails.jsx";
 import { CreatePizza } from "../components/Forms/CreatePizza.jsx";
+import { SalesReport } from "../components/SalesReports/SalesReport.jsx"
+import { AssignDelivery } from "../components/Delivery/AssignDelivery.jsx";
+
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -31,15 +34,15 @@ export const ApplicationViews = () => {
         <Route index element={<Home />} />
         <Route path="/CreateOrder" element={<CreateOrder currentUser={currentUser} />} />
         <Route path= "/OrderDetails/:orderId" element={ <OrderDetails currentUser={currentUser} />} />
-
+        <Route path="/AssignDelivery/:orderId" element={ <AssignDelivery />} />
         <Route
-          path="/employees"
+          path="/employees/:orderId"
           element={<Employees currentUser={currentUser} />}
           />
         <Route path="/employees/:employeeId" element={<EmployeeEdit />} />
         <Route
-          path="/sales"
-          element={<SalesReport/>}
+          path="/SalesReports"
+          element={<SalesReport />}
         />
         <Route path="/orders" element={<ViewOrder />} />
         <Route path="/CreatePizza" element={<CreatePizza />} />

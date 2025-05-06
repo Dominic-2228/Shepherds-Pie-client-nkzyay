@@ -9,3 +9,7 @@ export const getOrdersWithCustomer = () => {
 export const getOrderWithMatchingMonth = (id) => {
   return fetch(`http://localhost:8088/orders?monthId=${id}&_expand=customer`).then(res => res.json())
 }
+
+export const getOrderById = (orderId) => {
+  return fetch(`http://localhost:8088/orders/${orderId}`).then((res) => res.json())
+}

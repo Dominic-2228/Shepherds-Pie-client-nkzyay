@@ -25,8 +25,8 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover,
-button:focus {
+.home-btn button:hover,
+.home-btn button:focus {
   background-color: var(--primary-color);
   box-shadow: 0 0 0 3px var(--focus-color);
   outline: none;

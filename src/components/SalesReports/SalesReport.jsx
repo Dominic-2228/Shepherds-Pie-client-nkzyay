@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {
   getOrdersWithCustomer,
   getOrderWithMatchingMonth,
-} from "../../services/getOrders.jsx";
+} from "../../services/orderService.jsx";
 
 export const SalesReport = () => {
   const [orders, setOrders] = useState([]);
