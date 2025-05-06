@@ -6,6 +6,7 @@ import { EmployeeEdit } from "../components/Forms/EmployeeEdit.jsx";
 import { Home } from "../components/Home/Home";
 import { CreateOrder } from "../components/Orders/CreateOrder";
 import { ViewOrder } from "../components/viewOrder/ViewOrder.jsx";
+import { SalesReport } from "../components/Sales Reports/SalesReport.jsx";
 import { OrderDetails } from "../components/Orders/OrderDetails.jsx";
 import { CreatePizza } from "../components/Forms/CreatePizza.jsx";
 
@@ -17,6 +18,7 @@ export const ApplicationViews = () => {
     const learningUserObject = JSON.parse(localLearningUser);
     setCurrentUser(learningUserObject);
   }, []);
+
   return (
     <Routes>
       <Route
@@ -29,20 +31,26 @@ export const ApplicationViews = () => {
         }
       >
         <Route index element={<Home />} />
-        <Route path="/CreateOrder" element={<CreateOrder currentUser={currentUser} />} />
-        <Route path= "/OrderDetails/:orderId" element={ <OrderDetails currentUser={currentUser} />} />
+        <Route
+          path="/CreateOrder"
+          element={<CreateOrder currentUser={currentUser} />}
+        />
+        <Route
+          path="/OrderDetails/:orderId"
+          element={<OrderDetails currentUser={currentUser} />}
+        />
 
         <Route
           path="/employees"
           element={<Employees currentUser={currentUser} />}
-          />
-        <Route path="/employees/:employeeId" element={<EmployeeEdit />} />
-        <Route
-          path="/sales"
-          element={<SalesReport/>}
         />
+        <Route path="/employees/:employeeId" element={<EmployeeEdit />} />
+        <Route path="/sales" element={<SalesReport />} />
         <Route path="/orders" element={<ViewOrder />} />
         <Route path="/CreatePizza" element={<CreatePizza />} />
+        <Route path="/CreatePizza/:orderId" element={<CreatePizza />} />
+        <Route path="/OrderDetails" element={<OrderDetails />} />
+        <Route path="/OrderDetails/:orderId" element={<OrderDetails />} />
       </Route>
     </Routes>
   );
