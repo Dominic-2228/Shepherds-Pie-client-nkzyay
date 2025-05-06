@@ -34,6 +34,13 @@ export const postPizzaTopping = (toppingObj) => {
   }).then((res) => res.json());
 };
 
+export const getPizza = () => {
+  return fetch("http://localhost:8088/pizzas?_expand=size&_expand=cheese&_expand=sauce").then((res) => res.json())
+}
+
+export const getPizzaToppings = () => {
+  return fetch("http://localhost:8088/pizzaToppings?_expand=topping&_expand=pizza").then(res => res.json())
+}
 export const getPizzaByOrderId = (orderId) => {
   return fetch(
     `http://localhost:8088/pizzas?orderId=${orderId}&_embed=pizzaToppings`

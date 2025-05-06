@@ -8,6 +8,7 @@ import { CreateOrder } from "../components/Orders/CreateOrder";
 import { ViewOrder } from "../components/viewOrder/ViewOrder.jsx";
 import { OrderDetails } from "../components/Orders/OrderDetails.jsx";
 import { CreatePizza } from "../components/Forms/CreatePizza.jsx";
+import { ItemDetails } from "../components/SalesReports/ItemDetails.jsx";
 import { SalesReport } from "../components/SalesReports/SalesReport.jsx"
 import { AssignDelivery } from "../components/Delivery/AssignDelivery.jsx";
 
@@ -50,6 +51,7 @@ export const ApplicationViews = () => {
         <Route path="/sales" element={<SalesReport />} />
         <Route path="/orders" element={<ViewOrder />} />
         <Route path="/CreatePizza" element={<CreatePizza />} />
+        <Route path="/itemdetails/:item" element={<ItemDetails/>}/>
         <Route path="/CreatePizza/:orderId" element={<CreatePizza />} />
         <Route path="/OrderDetails" element={<OrderDetails />} />
         <Route path="/OrderDetails/:orderId" element={<OrderDetails />} />
