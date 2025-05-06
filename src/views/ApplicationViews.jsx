@@ -6,7 +6,6 @@ import { EmployeeEdit } from "../components/Forms/EmployeeEdit.jsx";
 import { Home } from "../components/Home/Home";
 import { CreateOrder } from "../components/Orders/CreateOrder";
 import { ViewOrder } from "../components/viewOrder/ViewOrder.jsx";
-import { SalesReport } from "../components/Sales Reports/SalesReport.jsx";
 import { OrderDetails } from "../components/Orders/OrderDetails.jsx";
 import { CreatePizza } from "../components/Forms/CreatePizza.jsx";
 import { SalesReport } from "../components/SalesReports/SalesReport.jsx"
