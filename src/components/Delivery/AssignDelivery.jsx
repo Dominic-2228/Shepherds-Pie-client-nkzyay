@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { useParams } from "react-router";
 import { assignEmployee, getAllEmployees, postEditedEmployee } from "../../services/employeeService";
 import "./AssignDelivery.css"
-import { getOrderById } from "../../services/orderService";
+import {getOrderDetailsById } from "../../services/orderService";
 
 export const AssignDelivery = () => {
     const [employees, setEmployees] = useState([])
@@ -19,7 +19,7 @@ export const AssignDelivery = () => {
     }, [])
 
     useEffect(() => {
-        getOrderById(orderId).then((orderData) => setOrder(orderData));
+        getOrderDetailsById(orderId).then((orderData) => setOrder(orderData));
     }, [orderId])
 
 
@@ -27,7 +27,7 @@ export const AssignDelivery = () => {
         const updatedEmployee = { ...employee, isAssigned: true };
     
         postEditedEmployee(updatedEmployee)
-          .then(() => getOrderById(orderId))
+          .then(() => getOrderDetailsById(orderId))
           .then((order) => {
             const updatedOrder = {
               ...order,
