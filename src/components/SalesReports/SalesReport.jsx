@@ -5,6 +5,8 @@ import {
 } from "../../services/orderService.jsx";
 import { PopularItems } from "./PopularItem.jsx";
 
+
+
 export const SalesReport = () => {
   const [orders, setOrders] = useState([]);
   const [month, setMonth] = useState(NaN);

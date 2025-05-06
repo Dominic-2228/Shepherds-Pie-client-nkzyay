@@ -68,7 +68,7 @@ export const ItemDetails = () => {
           )
         })}
         <div>
-        Percentage on pizza: %{Math.round(filteredTopping.length / allItems.length * 100)}
+        Percentage on pizza: {Math.round(filteredTopping.length / allItems.length * 100)}%
       </div>
       </div>
     </div>
