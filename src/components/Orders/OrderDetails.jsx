@@ -70,32 +70,6 @@ export const OrderDetails = () => {
     const pizzaToppingPromises = pizzas.map((pizza) =>
       getPizzaToppingsByPizzaId(pizza.id)
     );
-
-    Promise.all(pizzaToppingPromises).then((allToppings) => {
-      setPizzaToppings(allToppings);
-
-      // Flatten the toppings and fetch their full details
-      const allToppingIds = allToppings.flat().map((pt) => pt.toppingId);
-
-      const toppingDetailPromises = allToppingIds.map((id) =>
-        getToppingsByToppingId(id)
-      );
-
-      Promise.all(toppingDetailPromises).then((toppingDetailResults) => {
-        // Create a lookup for toppingId -> name
-        const toppingLookup = {};
-        toppingDetailResults.forEach((res) => {
-          toppingLookup[res.topping.id] = res.topping.name;
-        });
-
-        // Attach topping names to each pizza's toppings
-        const toppingDetailsByPizza = allToppings.map((pizzaToppings) => {
-          return pizzaToppings.map((pt) => toppingLookup[pt.toppingId]);
-        });
-
-        setToppingDetails(toppingDetailsByPizza);
-      });
-    });
   }, [pizzas]);
 
   let d = "";
