@@ -233,7 +233,7 @@ export const OrderDetails = () => {
               <button
                 className="button add-pizza-button"
                 onClick={() => {
-                  navigate(`/CreatePizza/${orderId}`);
+                  navigate(`/AssignDelivery/${orderId}`);
                 }}
               >
                 Assign Employee

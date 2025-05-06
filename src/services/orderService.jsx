@@ -39,3 +39,7 @@ export const getToppingsByToppingId = (toppingId) => {
     res.json()
   );
 };
+
+export const getOrderDetailsById = (orderId) => {
+  return fetch(`http://localhost:8088/orders/${orderId}`).then((res) => res.json())
+}
