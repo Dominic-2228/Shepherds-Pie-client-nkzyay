@@ -6,7 +6,7 @@
       "address": "123 Main St, Springfield, IL 62704",
       "phone": 5551111,
       "email": "alice@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     },
     {
@@ -15,7 +15,7 @@
       "address": "456 Side St, Madison, WI 53703",
       "phone": 4444444,
       "email": "bob@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": true
     },
     {
@@ -24,7 +24,7 @@
       "address": "789 Broad St, Columbus, OH 43215",
       "phone": 5553333,
       "email": "charlie@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     },
     {
@@ -33,7 +33,7 @@
       "address": "321 Oak St, Austin, TX 73301",
       "phone": 5554444,
       "email": "diana@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     },
     {
@@ -60,7 +60,7 @@
       "address": "135 Maple St, Portland, OR 97205",
       "phone": 5557777,
       "email": "georgeyboy@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     },
     {
@@ -69,7 +69,7 @@
       "address": "246 Birch St, Phoenix, AZ 85004",
       "phone": 5558888,
       "email": "hannah@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     }
   ],
@@ -186,14 +186,6 @@
       "email": "lukey@lukeylane.com",
       "tableNumber": "",
       "id": 16
-    },
-    {
-      "name": "Brit Beaty",
-      "address": "999 Where AM I Dr",
-      "phone": "999-999-999",
-      "email": "brit@enron.com",
-      "tableNumber": "",
-      "id": 17
     }
   ],
   "orders": [
@@ -507,15 +499,24 @@
       "id": 32
     },
     {
+      "id": 33,
       "customerId": 17,
-      "orderTime": "2025-05-06T21:13:48.369Z",
+      "order": "2025-05-206T21:13:48.369Z",
       "tableNumber": null,
-      "status": "Pending",
+      "status": "Out-for-Delivery",
       "gratuity": 0,
       "totalCost": 0,
-      "takenByEmployeeId": 4,
-      "deliveredByEmployeeId": null,
-      "id": 33
+      "takenByEmployeeId": 4
+    },
+    {
+      "id": 34,
+      "customerId": 18,
+      "order": "2025-05-06T23:33:04.987Z",
+      "tableNumber": null,
+      "status": "Out-for-Delivery",
+      "gratuity": 4,
+      "totalCost": 0,
+      "takenByEmployeeId": 4
     }
   ],
   "sizes": [
@@ -667,6 +668,14 @@
       "cheeseId": 2,
       "totalCost": 11.75,
       "id": 4
+    },
+    {
+      "orderId": "34",
+      "sizeId": 2,
+      "sauceId": 1,
+      "cheeseId": 2,
+      "totalCost": 11,
+      "id": 5
     }
   ],
   "pizzaToppings": [
@@ -704,6 +713,11 @@
       "pizzaId": 4,
       "toppingId": 2,
       "id": 7
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 2,
+      "id": 8
     }
   ]
 }

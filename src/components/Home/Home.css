@@ -1,18 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playwrite+DK+Loopet:wght@100..400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 .center-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
+  margin-top: 4rem;
+  border: 4px dashed rgb(245, 116, 116);
+  background-color: rgb(214, 241, 228);
+  padding: 3em;
+}
+
+.header-container h2 {
+  font-family: "Roboto Slab";
+  font-size: 4em;
+  margin-bottom: 1em;
+}
+
+.center-container-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
   margin-top: 3rem;
+  margin-bottom: 3em;
 }
 
- dom logo, img {
+.center-container-btn button:hover {
+  background-color: rgb(107, 173, 141);
+  box-shadow: 0 0 0 3px var(--focus-color);
+  outline: none;
+}
+
+.color-block {
+  height: 30%;
+  background-color: black;
+}
+
+.dom-logo {
   height: 15em;
+  animation: myAnim 3s ease 0s 1 normal forwards;
 }
 
-#dom-img:hover {
-  height: 16em;
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: rotate(-540deg) scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
 }
+
+.dom-logo:hover {
+  animation: myHover 3s ease 0s 1 normal forwards;
+}
+
+@keyframes myHover {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tagline {
+  margin-top: 2em;
+  font-family: "Playwrite DK Loopet";
+}
+
+
 .home-btn {
   padding: var(--padding);
   background-color: var(--primary-color);
@@ -27,7 +91,7 @@
 
 .home-btn button:hover,
 .home-btn button:focus {
-  background-color: var(--primary-color);
+  background-color: rgb(189, 82, 82);
   box-shadow: 0 0 0 3px var(--focus-color);
   outline: none;
 }
