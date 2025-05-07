@@ -86,7 +86,8 @@
 
 .total,
 .tip,
-.created {
+.created,
+.delivered {
   display: flex;
   width: 100%;
   justify-content: space-between;
