@@ -15,7 +15,7 @@
       "address": "456 Side St, Madison, WI 53703",
       "phone": 4444444,
       "email": "bob@example.com",
-      "isAssigned": false,
+      "isAssigned": true,
       "isAdmin": true
     },
     {
@@ -60,7 +60,7 @@
       "address": "135 Maple St, Portland, OR 97205",
       "phone": 5557777,
       "email": "georgeyboy@example.com",
-      "isAssigned": false,
+      "isAssigned": true,
       "isAdmin": false
     },
     {
@@ -186,6 +186,22 @@
       "email": "lukey@lukeylane.com",
       "tableNumber": "",
       "id": 16
+    },
+    {
+      "name": "CJ",
+      "address": "555 Gary Cahuenga Blvd",
+      "phone": "555-555-5555",
+      "email": "CJ@gmail.com",
+      "tableNumber": "",
+      "id": 17
+    },
+    {
+      "name": "Dolly Parton",
+      "address": "1992 Im Gonna Beat Ur Ass Jolene St",
+      "phone": "999-999-9999",
+      "email": "helloDolly@dollywood.com",
+      "tableNumber": "",
+      "id": 18
     }
   ],
   "orders": [
@@ -284,16 +300,6 @@
       "takenByEmployeeId": 2,
       "deliveredByEmployeeId": null,
       "monthId": 1
-    },
-    {
-      "id": 14,
-      "customerId": 8,
-      "tableNumber": 3,
-      "status": "Completed",
-      "gratuity": 0,
-      "totalCost": 28,
-      "takenByEmployeeId": 3,
-      "monthId": 2
     },
     {
       "id": 16,
@@ -488,33 +494,23 @@
       "monthId": 5
     },
     {
-      "customerId": 16,
-      "orderTime": "2025-05-06T19:17:45.071Z",
+      "customerId": 17,
+      "orderTime": "2025-05-07T01:07:12.030Z",
       "tableNumber": null,
-      "status": "Pending",
+      "status": "Out-for-Delivery",
       "gratuity": 0,
       "totalCost": 0,
-      "takenByEmployeeId": 2,
-      "deliveredByEmployeeId": null,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": 7,
       "id": 32
     },
     {
       "id": 33,
-      "customerId": 17,
-      "order": "2025-05-206T21:13:48.369Z",
-      "tableNumber": null,
-      "status": "Out-for-Delivery",
-      "gratuity": 0,
-      "totalCost": 0,
-      "takenByEmployeeId": 4
-    },
-    {
-      "id": 34,
       "customerId": 18,
-      "order": "2025-05-06T23:33:04.987Z",
+      "order": "2025-05-07T01:53:57.325Z",
       "tableNumber": null,
       "status": "Out-for-Delivery",
-      "gratuity": 4,
+      "gratuity": 6,
       "totalCost": 0,
       "takenByEmployeeId": 4
     }
@@ -676,6 +672,14 @@
       "cheeseId": 2,
       "totalCost": 11,
       "id": 5
+    },
+    {
+      "orderId": "33",
+      "sizeId": 3,
+      "sauceId": 3,
+      "cheeseId": 3,
+      "totalCost": 15.25,
+      "id": 6
     }
   ],
   "pizzaToppings": [
@@ -718,6 +722,21 @@
       "pizzaId": 5,
       "toppingId": 2,
       "id": 8
+    },
+    {
+      "pizzaId": 6,
+      "toppingId": 3,
+      "id": 9
+    },
+    {
+      "pizzaId": 6,
+      "toppingId": 2,
+      "id": 10
+    },
+    {
+      "pizzaId": 6,
+      "toppingId": 8,
+      "id": 11
     }
   ]
 }

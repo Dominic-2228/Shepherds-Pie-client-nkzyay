@@ -89,8 +89,13 @@ export const ViewOrder = () => {
             <div>
               <h3>Customer: {order.customer?.name}</h3>
             </div>
-            <div>
-              <h3>Status: {order.status}</h3>
+            <div className="order-status">
+              <h3>Status:</h3>
+              <select className="order-status">
+              <option>
+                <h3>{order.status}</h3>
+                </option>
+              </select>
             </div>
           </fieldset>
         ))}

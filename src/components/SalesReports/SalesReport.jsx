@@ -4,7 +4,7 @@ import {
   getOrderWithMatchingMonth,
 } from "../../services/orderService.jsx";
 import { PopularItems } from "./PopularItem.jsx";
-
+import "./SalesReports.css";
 
 
 export const SalesReport = () => {
@@ -28,7 +28,7 @@ export const SalesReport = () => {
 
   return (
     // selection menu
-    <div>
+    <div className="sales-section">
       <select onChange={(e) => setMonth(Number(e.target.value))}>
         <option>Month</option>
         {[
@@ -51,13 +51,13 @@ export const SalesReport = () => {
       </select>
       {month > 0 ? (
         <div>
-          <h1>
+          <h1 className="sales-header">
             {/* render on intial load */}
             Orders for{" "}
             {!Number.isNaN(month) && typeof month === "number"
               ? new Date(0, month - 1).toLocaleString("en-US", {
-                  month: "long",
-                })
+                month: "long",
+              })
               : "Company"}
           </h1>
 
@@ -77,15 +77,16 @@ export const SalesReport = () => {
             </div>
           </fieldset>
 
-          <h1>Day-By-Day</h1>
+          <div className="sales-header"><h1>Day-By-Day</h1></div>
           <fieldset>
             {filteredMonth.map((obj, index) => {
               const isoTime = obj.orderTime;
               const localTime = new Date(isoTime).toLocaleString();
-              return (
+              return (<div className="sales-day">
                 <h3 key={index}>
                   {localTime} : ${obj.totalCost}
                 </h3>
+              </div>
               );
             })}
           </fieldset>
@@ -98,8 +99,8 @@ export const SalesReport = () => {
             {Number.isNaN(month)
               ? "Company"
               : new Date(0, month - 1).toLocaleString("en-US", {
-                  month: "long",
-                })}
+                month: "long",
+              })}
           </h1>
 
           <fieldset style={{ marginBottom: "1rem" }}>
@@ -122,16 +123,17 @@ export const SalesReport = () => {
             {orders.map((obj, index) => {
               const isoTime = obj.orderTime;
               const localTime = new Date(isoTime).toLocaleString();
-              return (
+              return (<div className="sales-day">
                 <h3 key={index}>
                   {localTime} : ${obj.totalCost}
                 </h3>
+              </div>
               );
             })}
           </fieldset>
           {/* popular items section */}
-          <div>
-            <PopularItems/>
+          <div className="popular-items">
+            <PopularItems />
 
           </div>
         </div>
