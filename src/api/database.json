@@ -69,7 +69,7 @@
       "address": "246 Birch St, Phoenix, AZ 85004",
       "phone": 5558888,
       "email": "hannah@example.com",
-      "isAssigned": false,
+      "isAssigned": true,
       "isAdmin": false
     }
   ],
@@ -202,6 +202,14 @@
       "email": "helloDolly@dollywood.com",
       "tableNumber": "",
       "id": 18
+    },
+    {
+      "name": "Dolly Party",
+      "address": "dsaklfjdlkasjlkf",
+      "phone": "999-9999",
+      "email": "hellodolly@dollywood",
+      "tableNumber": "",
+      "id": 19
     }
   ],
   "orders": [
@@ -513,6 +521,16 @@
       "gratuity": 6,
       "totalCost": 0,
       "takenByEmployeeId": 4
+    },
+    {
+      "id": 34,
+      "customerId": 19,
+      "order": "2025-05-07T14:09:28.080Z",
+      "tableNumber": null,
+      "status": "Out-for-Delivery",
+      "gratuity": 666,
+      "totalCost": 0,
+      "takenByEmployeeId": 1
     }
   ],
   "sizes": [

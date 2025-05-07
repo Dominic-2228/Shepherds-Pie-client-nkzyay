@@ -13,6 +13,7 @@ export const ViewOrder = () => {
     getOrdersWithCustomer().then(setOrders);
   }, []);
 
+
   const isDate = (dateString) => {
     const orderDate = new Date(dateString);
     const today = new Date();
@@ -40,6 +41,12 @@ export const ViewOrder = () => {
       day: "numeric",
     }));
   };
+
+const handleClose = (employee) => {
+      
+    }
+
+
 
   return (
     <div className="view-orders-container">
@@ -92,9 +99,8 @@ export const ViewOrder = () => {
             <div className="order-status">
               <h3>Status:</h3>
               <select className="order-status">
-              <option>
-                <h3>{order.status}</h3>
-                </option>
+              <option>{order.status}</option>
+              <option>Completed</option>
               </select>
             </div>
           </fieldset>
