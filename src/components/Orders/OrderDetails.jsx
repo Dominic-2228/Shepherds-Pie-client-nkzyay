@@ -26,17 +26,25 @@ export const OrderDetails = () => {
   const [pizzaToppings, setPizzaToppings] = useState([]);
   const [toppingDetails, setToppingDetails] = useState([]);
   const [createdBy, setCreatedBy] = useState({});
+  const [delivery, setDelivered] = useState({});
   const [employees, setEmployees] = useState([]);
 
   const { orderId } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const foundEmployee = employees.find(
-      (emp) => emp.id === order.takenByEmployeeId
-    );
-    setCreatedBy(foundEmployee);
-  }, [order]);
+    if (order && employees.length > 0) {
+      const foundEmployee = employees.find(
+        (emp) => emp.id === order.takenByEmployeeId
+      );
+      setCreatedBy(foundEmployee);
+
+      const deliveryDriver = employees.find(
+        (emp) => emp.id === order.deliveredByEmployeeId
+      );
+      setDelivered(deliveryDriver);
+    }
+  }, [order, employees]);
 
   useEffect(() => {
     getAllEmployees().then(setEmployees);
@@ -190,10 +198,14 @@ export const OrderDetails = () => {
                   <div className="pizza-detail">
                     ${pizza.totalCost.toFixed(2)}
                   </div>
-                  <button className="pizza-button" 
-                  onClick={() => {
-                  navigate(`/EditPizza/${pizza.id}`);
-                }}>Edit</button>
+                  <button
+                    className="pizza-button"
+                    onClick={() => {
+                      navigate(`/EditPizza/${pizza.id}`);
+                    }}
+                  >
+                    Edit
+                  </button>
                   <button className="pizza-button">Remove</button>
                 </div>
               );
@@ -224,6 +236,12 @@ export const OrderDetails = () => {
               <label>Order Created by:</label>
               <div className="created-detail">{createdBy?.name}</div>
             </div>
+            {order.deliveredByEmployeeId && (
+              <div className="delivered">
+                <label>Assigned Driver:</label>
+                <div className="delivered-detail">{delivery?.name}</div>
+              </div>
+            )}
             <div className="order-button-container">
               <button
                 className="button add-pizza-button"
