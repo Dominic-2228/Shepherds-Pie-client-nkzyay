@@ -16,6 +16,7 @@ import {
   getPizzaToppingsByPizzaId,
   getSauceByPizzaId,
   getSizeByPizzaId,
+  removePizza,
 } from "../../services/pizzaService";
 import { getAllEmployees } from "../../services/employeeService";
 
@@ -28,6 +29,7 @@ export const OrderDetails = () => {
   const [createdBy, setCreatedBy] = useState({});
   const [delivery, setDelivered] = useState({});
   const [employees, setEmployees] = useState([]);
+  const [gratuity, setGratuity] = useState(0);
 
   const { orderId } = useParams();
   const navigate = useNavigate();
@@ -107,7 +109,28 @@ export const OrderDetails = () => {
       }
     }
   };
+  let orderTotal = 0;
+  pizzaDetails.forEach((pizza) => {
+    orderTotal += pizza.totalCost || 0;
+  });
 
+  let orderTotalWithTip = orderTotal + (gratuity || 0);
+
+  const handleRemove = (e) => {
+    if (e.target.name === "remove") {
+      if (confirm("Are you sure you want to remove this pizza?")) {
+        const deleteToppings = pizzas.map((pizza) =>
+          deletePizzaTopping(pizza.id)
+        );
+
+        Promise.all(deleteToppings)
+          .then(() => removePizza(parseInt(e.target.value)))
+          .then(window.location.reload());
+      } else {
+        window.location.reload();
+      }
+    }
+  };
   const handleSubmit = (e) => {
     if (e.target.name === "submit") {
       const updatedOrder = {
@@ -129,9 +152,6 @@ export const OrderDetails = () => {
     }
   };
 
-  //Write a function that will take a pizza object as input and
-  //  return an object with the size, cheese, sauce, toppings and price for that pizza
-  //How would i get the toppings
   return (
     <article className="order-details-container">
       <div className="title">
@@ -206,7 +226,14 @@ export const OrderDetails = () => {
                   >
                     Edit
                   </button>
-                  <button className="pizza-button">Remove</button>
+                  <button
+                    name="remove"
+                    value={pizza.id}
+                    onClick={handleRemove}
+                    className="pizza-button"
+                  >
+                    Remove
+                  </button>
                 </div>
               );
             })}
@@ -214,7 +241,7 @@ export const OrderDetails = () => {
           <div className="order-details">
             <div className="total">
               <label>Order Total:</label>
-              <div className="total-price">$22.50</div>
+              <div className="total-price">${orderTotalWithTip.toFixed(2)}</div>
             </div>
             <div className="tip">
               <label htmlFor="tip">Add Tip:</label>
@@ -229,6 +256,7 @@ export const OrderDetails = () => {
                     ...order,
                     gratuity: parseInt(e.target.value) || 0,
                   });
+                  setGratuity(parseInt(e.target.value));
                 }}
               />
             </div>
@@ -280,6 +308,3 @@ export const OrderDetails = () => {
     </article>
   );
 };
-
-//If no pizzas in order display "Your order is empty, please add a pizza"
-// Otherwise display current pizzas in order with details

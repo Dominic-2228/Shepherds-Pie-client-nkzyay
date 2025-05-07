@@ -35,12 +35,16 @@ export const postPizzaTopping = (toppingObj) => {
 };
 
 export const getPizza = () => {
-  return fetch("http://localhost:8088/pizzas?_expand=size&_expand=cheese&_expand=sauce").then((res) => res.json())
-}
+  return fetch(
+    "http://localhost:8088/pizzas?_expand=size&_expand=cheese&_expand=sauce"
+  ).then((res) => res.json());
+};
 
 export const getPizzaToppings = () => {
-  return fetch("http://localhost:8088/pizzaToppings?_expand=topping&_expand=pizza").then(res => res.json())
-}
+  return fetch(
+    "http://localhost:8088/pizzaToppings?_expand=topping&_expand=pizza"
+  ).then((res) => res.json());
+};
 export const getPizzaByOrderId = (orderId) => {
   return fetch(
     `http://localhost:8088/pizzas?orderId=${orderId}&_embed=pizzaToppings`
@@ -88,4 +92,10 @@ export const getPizzaToppingsByPizzaId = (pizzaId) => {
   return fetch(`http://localhost:8088/pizzaToppings?pizzaId=${pizzaId}`).then(
     (res) => res.json()
   );
+};
+
+export const removePizza = (pizzaId) => {
+  return fetch(`http://localhost:8088/pizzas/${pizzaId}`, {
+    method: "DELETE",
+  }).then((res) => res.json());
 };
