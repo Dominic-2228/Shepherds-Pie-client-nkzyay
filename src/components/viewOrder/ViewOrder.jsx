@@ -1,6 +1,7 @@
 import "./ViewOrder.css";
 import { useEffect, useState } from "react";
-import { getOrdersWithCustomer } from "../../services/orderService.jsx";
+import { getOrderDetailsById, getOrdersWithCustomer } from "../../services/orderService.jsx";
+import { assignEmployee, postEditedEmployee } from "../../services/employeeService"
 import { Link } from "react-router-dom";
 
 export const ViewOrder = () => {
@@ -42,9 +43,24 @@ export const ViewOrder = () => {
     }));
   };
 
-const handleClose = (employee) => {
-      
-    }
+ 
+
+ const handleComplete = (employee) => {
+   const updatedEmployee = { ...employee, isAssigned: false }
+ 
+  postEditedEmployee(updatedEmployee)
+    .then((order) => {
+      const updatedOrder = {
+        ...order,
+        status: "Completed",
+      };
+      return assignEmployee(order.id, updatedOrder)
+    })
+    .then(() => {
+      return getOrdersWithCustomer().then(setOrders)
+    })
+
+};
 
 
 
@@ -98,10 +114,14 @@ const handleClose = (employee) => {
             </div>
             <div className="order-status">
               <h3>Status:</h3>
-              <select className="order-status">
-              <option>{order.status}</option>
-              <option>Completed</option>
-              </select>
+              {order.status}
+            </div>
+            <div>
+              <button
+               className="complete-btn"
+               onClick={() => handleComplete(order)}
+               disabled={order.status === "Completed"}
+               >Complete</button>
             </div>
           </fieldset>
         ))}
