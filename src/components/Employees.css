@@ -35,19 +35,64 @@
 }
 .error-section {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 4rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   color: red;
+   border: 4px dashed rgb(245, 116, 116);
 }
 
 .error {
   font-size: 75px;
   font-style: italic;
+  animation-name: font-color;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
+@keyframes font-color {
+from {color: red;}
+to {color: rgb(180, 22, 22);}
+}
 .the-great-dom {
   max-width: 250px;
+  margin-top: 1em;
+  animation: the-great-dom 2s ease 0s 1 normal forwards;
+}
+
+
+@keyframes the-great-dom {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 50%;
+	}
+
+	10% {
+		transform: rotate(8deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-10deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(10deg);
+	}
+
+	80% {
+		transform: rotate(-8deg);
+	}
+
+	90% {
+		transform: rotate(8deg);
+	}
 }
 
 .the-great-dom-container {

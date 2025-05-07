@@ -11,6 +11,7 @@ import { CreatePizza } from "../components/Forms/CreatePizza.jsx";
 import { ItemDetails } from "../components/SalesReports/ItemDetails.jsx";
 import { SalesReport } from "../components/SalesReports/SalesReport.jsx"
 import { AssignDelivery } from "../components/Delivery/AssignDelivery.jsx";
+import { EditPizza } from "../components/Forms/EditPizza.jsx";
 
 
 export const ApplicationViews = () => {
@@ -44,13 +45,14 @@ export const ApplicationViews = () => {
         />
         <Route path="/AssignDelivery/:orderId" element={ <AssignDelivery />} />
         <Route
-          path="/employees/:orderId"
+          path="/employees"
           element={<Employees currentUser={currentUser} />}
         />
         <Route path="/employees/:employeeId" element={<EmployeeEdit />} />
         <Route path="/sales" element={<SalesReport />} />
         <Route path="/orders" element={<ViewOrder />} />
         <Route path="/CreatePizza" element={<CreatePizza />} />
+        <Route path="/EditPizza/:pizzaId" element={<EditPizza />} />
         <Route path="/itemdetails/:item" element={<ItemDetails/>}/>
         <Route path="/CreatePizza/:orderId" element={<CreatePizza />} />
         <Route path="/OrderDetails" element={<OrderDetails />} />

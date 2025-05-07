@@ -6,7 +6,7 @@
       "address": "123 Main St, Springfield, IL 62704",
       "phone": 5551111,
       "email": "alice@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     },
     {
@@ -24,7 +24,7 @@
       "address": "789 Broad St, Columbus, OH 43215",
       "phone": 5553333,
       "email": "charlie@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     },
     {
@@ -33,7 +33,7 @@
       "address": "321 Oak St, Austin, TX 73301",
       "phone": 5554444,
       "email": "diana@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     },
     {
@@ -188,12 +188,28 @@
       "id": 16
     },
     {
-      "name": "Brit Beaty",
-      "address": "999 Where AM I Dr",
-      "phone": "999-999-999",
-      "email": "brit@enron.com",
+      "name": "CJ",
+      "address": "555 Gary Cahuenga Blvd",
+      "phone": "555-555-5555",
+      "email": "CJ@gmail.com",
       "tableNumber": "",
       "id": 17
+    },
+    {
+      "name": "Dolly Parton",
+      "address": "1992 Im Gonna Beat Ur Ass Jolene St",
+      "phone": "999-999-9999",
+      "email": "helloDolly@dollywood.com",
+      "tableNumber": "",
+      "id": 18
+    },
+    {
+      "name": "Dolly Party",
+      "address": "dsaklfjdlkasjlkf",
+      "phone": "999-9999",
+      "email": "hellodolly@dollywood",
+      "tableNumber": "",
+      "id": 19
     }
   ],
   "orders": [
@@ -292,16 +308,6 @@
       "takenByEmployeeId": 2,
       "deliveredByEmployeeId": null,
       "monthId": 1
-    },
-    {
-      "id": 14,
-      "customerId": 8,
-      "tableNumber": 3,
-      "status": "Completed",
-      "gratuity": 0,
-      "totalCost": 28,
-      "takenByEmployeeId": 3,
-      "monthId": 2
     },
     {
       "id": 16,
@@ -496,26 +502,35 @@
       "monthId": 5
     },
     {
-      "customerId": 16,
-      "orderTime": "2025-05-06T19:17:45.071Z",
+      "customerId": 17,
+      "orderTime": "2025-05-07T01:07:12.030Z",
       "tableNumber": null,
-      "status": "Pending",
+      "status": "Out-for-Delivery",
       "gratuity": 0,
       "totalCost": 0,
-      "takenByEmployeeId": 2,
-      "deliveredByEmployeeId": null,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": 7,
       "id": 32
     },
     {
-      "customerId": 17,
-      "orderTime": "2025-05-06T21:13:48.369Z",
+      "id": 33,
+      "customerId": 18,
+      "order": "2025-05-07T01:53:57.325Z",
       "tableNumber": null,
-      "status": "Pending",
-      "gratuity": 0,
+      "status": "Out-for-Delivery",
+      "gratuity": 6,
       "totalCost": 0,
-      "takenByEmployeeId": 4,
-      "deliveredByEmployeeId": null,
-      "id": 33
+      "takenByEmployeeId": 4
+    },
+    {
+      "id": 34,
+      "customerId": 19,
+      "order": "2025-05-07T14:09:28.080Z",
+      "tableNumber": null,
+      "status": "Out-for-Delivery",
+      "gratuity": 666,
+      "totalCost": 0,
+      "takenByEmployeeId": 1
     }
   ],
   "sizes": [
@@ -667,6 +682,22 @@
       "cheeseId": 2,
       "totalCost": 11.75,
       "id": 4
+    },
+    {
+      "orderId": "34",
+      "sizeId": 2,
+      "sauceId": 1,
+      "cheeseId": 2,
+      "totalCost": 11,
+      "id": 5
+    },
+    {
+      "orderId": "33",
+      "sizeId": 3,
+      "sauceId": 3,
+      "cheeseId": 3,
+      "totalCost": 15.25,
+      "id": 6
     }
   ],
   "pizzaToppings": [
@@ -704,6 +735,26 @@
       "pizzaId": 4,
       "toppingId": 2,
       "id": 7
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 2,
+      "id": 8
+    },
+    {
+      "pizzaId": 6,
+      "toppingId": 3,
+      "id": 9
+    },
+    {
+      "pizzaId": 6,
+      "toppingId": 2,
+      "id": 10
+    },
+    {
+      "pizzaId": 6,
+      "toppingId": 8,
+      "id": 11
     }
   ]
 }

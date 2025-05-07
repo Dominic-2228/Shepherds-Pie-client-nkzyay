@@ -1,0 +1,39 @@
+.sales-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 100px auto;
+    text-align: center;
+  }
+
+
+  .sales-header h1, h2 {
+    margin-bottom: 1rem;
+    color:rgb(245, 116, 116);
+    margin: 80px;
+  }
+  
+  .sales-section select {
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    width: 40%;
+  }
+  
+  .sales-day,
+  .popular-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-bg-color); /* optional for visual clarity */
+    border: 1px solid var(--border-color);   /* optional border */
+    border-radius: var(--border-radius);
+    padding: 1rem 1.5rem;
+    margin-left: 60px;
+    margin-bottom: 2rem;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

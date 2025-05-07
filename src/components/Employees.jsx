@@ -54,7 +54,7 @@ export const Employees = ({ currentUser }) => {
     <section className="error-section">
       <div className="the-great-dom-container">
         <Link to="/">
-          <img src="../src/theGreatDom.png" className="the-great-dom"></img>
+          <img src="https://ik.imagekit.io/b0xq0alh4/Dom-ino's%20logo.png?updatedAt=1746194674980" className="the-great-dom"></img>
         </Link>
       </div>
       <span className="error">Error:</span>

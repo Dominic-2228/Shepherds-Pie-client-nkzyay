@@ -190,7 +190,10 @@ export const OrderDetails = () => {
                   <div className="pizza-detail">
                     ${pizza.totalCost.toFixed(2)}
                   </div>
-                  <button className="pizza-button">Edit</button>
+                  <button className="pizza-button" 
+                  onClick={() => {
+                  navigate(`/EditPizza/${pizza.id}`);
+                }}>Edit</button>
                   <button className="pizza-button">Remove</button>
                 </div>
               );

@@ -1,11 +1,14 @@
+
+
 .view-orders-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* full viewport height */
-  background-color: #f9f9f9; /* optional light background */
-  font-family: Arial, sans-serif;
+  max-width: 85rem;
+  margin: 0 auto;
+  text-align: center;
+  margin: 100px auto;
 }
 
 .view-orders-container h2 {
@@ -17,21 +20,28 @@
   margin-bottom: 2rem;
   font-size: 1rem;
 }
+.order-status select {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: red;
+}
 
 .order-fieldset {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
   border: 1px solid #ccc;
   padding: 1rem 2rem;
-  width: 300px;
+  width: 100%;
   border-radius: 8px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.view-orders-container {
-  max-width: 85rem;
-  margin: 0 auto;
-  text-align: center;
-}
+
 
 .header-row {
   display: flex;
@@ -59,4 +69,8 @@ button {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.order-status {
+  color: rgb(0, 0, 0);
 }
