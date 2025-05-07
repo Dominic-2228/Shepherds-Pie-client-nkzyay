@@ -6,7 +6,6 @@ import {
 import { PopularItems } from "./PopularItem.jsx";
 import "./SalesReports.css";
 
-
 export const SalesReport = () => {
   const [orders, setOrders] = useState([]);
   const [month, setMonth] = useState(NaN);
@@ -56,8 +55,8 @@ export const SalesReport = () => {
             Orders for{" "}
             {!Number.isNaN(month) && typeof month === "number"
               ? new Date(0, month - 1).toLocaleString("en-US", {
-                month: "long",
-              })
+                  month: "long",
+                })
               : "Company"}
           </h1>
 
@@ -77,18 +76,23 @@ export const SalesReport = () => {
             </div>
           </fieldset>
 
-          <div className="sales-header"><h1>Day-By-Day</h1></div>
+          <div className="sales-header">
+            <h1>Day-By-Day</h1>
+          </div>
           <fieldset>
-            {filteredMonth.map((obj, index) => {
-              const isoTime = obj.orderTime;
-              const localTime = new Date(isoTime).toLocaleString();
-              return (<div className="sales-day">
-                <h3 key={index}>
-                  {localTime} : ${obj.totalCost}
-                </h3>
-              </div>
-              );
-            })}
+            {[...filteredMonth]
+              .sort((a, b) => new Date(a.orderTime) - new Date(b.orderTime))
+              .map((obj, index) => {
+                const isoTime = obj.orderTime;
+                const localTime = new Date(isoTime).toLocaleString();
+                return (
+                  <div className="sales-day" key={index}>
+                    <h3>
+                      {localTime} : ${obj.totalCost}
+                    </h3>
+                  </div>
+                );
+              })}
           </fieldset>
         </div>
       ) : (
@@ -99,8 +103,8 @@ export const SalesReport = () => {
             {Number.isNaN(month)
               ? "Company"
               : new Date(0, month - 1).toLocaleString("en-US", {
-                month: "long",
-              })}
+                  month: "long",
+                })}
           </h1>
 
           <fieldset style={{ marginBottom: "1rem" }}>
@@ -123,18 +127,18 @@ export const SalesReport = () => {
             {orders.map((obj, index) => {
               const isoTime = obj.orderTime;
               const localTime = new Date(isoTime).toLocaleString();
-              return (<div className="sales-day">
-                <h3 key={index}>
-                  {localTime} : ${obj.totalCost}
-                </h3>
-              </div>
+              return (
+                <div className="sales-day">
+                  <h3 key={index}>
+                    {localTime} : ${obj.totalCost}
+                  </h3>
+                </div>
               );
             })}
           </fieldset>
           {/* popular items section */}
           <div className="popular-items">
             <PopularItems />
-
           </div>
         </div>
       )}
