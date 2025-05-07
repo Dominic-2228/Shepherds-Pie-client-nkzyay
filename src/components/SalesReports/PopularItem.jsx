@@ -82,16 +82,15 @@ export const PopularItems = () => {
   });
 
   const toppingDisplay = (n, m) => {
+    const topping = mostPopularTopping[n];
+    if (!topping) return null; // prevent accessing undefined
+
     return (
-      <>
-        {mostPopularTopping.length > 0 && (
-          <Link to={`/itemdetails/${mostPopularTopping[n][0]}`}>
-            <div>
-              {mostPopularTopping[n][0]}, {mostPopularTopping[n][m]} Orders
-            </div>
-          </Link>
-        )}
-      </>
+      <Link to={`/itemdetails/${topping[0]}`}>
+        <div>
+          {topping[0]}, {topping[m]} Orders
+        </div>
+      </Link>
     );
   };
 
@@ -121,7 +120,7 @@ export const PopularItems = () => {
       </div>
       <div>{toppingDisplay(0, 1)}</div>
       <div>{toppingDisplay(1, 1)}</div>
-      <div>{toppingDisplay(2,1)}</div>
+      <div>{toppingDisplay(2, 1)}</div>
     </div>
   );
 };

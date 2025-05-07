@@ -6,14 +6,14 @@
       "address": "123 Main St, Springfield, IL 62704",
       "phone": 5551111,
       "email": "alice@example.com",
-      "isAssigned": false,
+      "isAssigned": true,
       "isAdmin": false
     },
     {
       "id": 2,
       "name": "Bob Reynolds",
       "address": "456 Side St, Madison, WI 53703",
-      "phone": 4444444,
+      "phone": 4444445,
       "email": "bob@example.com",
       "isAssigned": false,
       "isAdmin": true
@@ -24,7 +24,7 @@
       "address": "789 Broad St, Columbus, OH 43215",
       "phone": 5553333,
       "email": "charlie@example.com",
-      "isAssigned": false,
+      "isAssigned": true,
       "isAdmin": false
     },
     {
@@ -212,14 +212,22 @@
       "id": 19
     },
     {
+<<<<<<< HEAD
       "name": "Tom Selleck",
       "address": "99 Mustache Ln",
       "phone": "999-999-9999",
       "email": "tomtomtom@tom",
+=======
+      "name": "test",
+      "address": "test",
+      "phone": "test",
+      "email": "test",
+>>>>>>> develop
       "tableNumber": "",
       "id": 20
     },
     {
+<<<<<<< HEAD
       "name": "Carl",
       "address": "999 Wallaby Way",
       "phone": "444-444-4444",
@@ -250,6 +258,22 @@
       "email": "asdfdsafdasf",
       "tableNumber": "",
       "id": 24
+=======
+      "name": "gdsa",
+      "address": "gdsa",
+      "phone": "gdsa",
+      "email": "gdsa",
+      "tableNumber": "7",
+      "id": 21
+    },
+    {
+      "name": "New",
+      "address": "New",
+      "phone": "333",
+      "email": "New",
+      "tableNumber": "3",
+      "id": 22
+>>>>>>> develop
     }
   ],
   "orders": [
@@ -554,34 +578,23 @@
     },
     {
       "id": 33,
-      "customerId": 18,
-      "order": "2025-05-07T01:53:57.325Z",
-      "tableNumber": null,
+      "customerId": 21,
+      "order": "2025-05-07T16:34:08.013Z",
+      "tableNumber": "7",
       "status": "Out-for-Delivery",
-      "gratuity": 6,
+      "gratuity": 2,
       "totalCost": 0,
-      "takenByEmployeeId": 4
+      "takenByEmployeeId": 2
     },
     {
       "id": 34,
-      "customerId": 19,
-      "order": "2025-05-07T14:09:28.080Z",
-      "tableNumber": null,
-      "status": "Out-for-Delivery",
-      "gratuity": 666,
-      "totalCost": 0,
-      "takenByEmployeeId": 1
-    },
-    {
-      "customerId": 24,
-      "orderTime": "2025-05-07T16:48:12.271Z",
-      "tableNumber": null,
+      "customerId": 22,
+      "order": "2025-05-07T16:46:20.058Z",
+      "tableNumber": "3",
       "status": "Pending",
       "gratuity": 0,
       "totalCost": 0,
-      "takenByEmployeeId": 4,
-      "deliveredByEmployeeId": null,
-      "id": 35
+      "takenByEmployeeId": 2
     }
   ],
   "sizes": [
@@ -703,14 +716,6 @@
   ],
   "pizzas": [
     {
-      "orderId": "14",
-      "sizeId": 1,
-      "sauceId": 3,
-      "cheeseId": 3,
-      "totalCost": 7.25,
-      "id": 1
-    },
-    {
       "orderId": "32",
       "sizeId": 2,
       "sauceId": 2,
@@ -727,73 +732,39 @@
       "id": 3
     },
     {
-      "orderId": "33",
-      "sizeId": 2,
-      "sauceId": 2,
-      "cheeseId": 2,
-      "totalCost": 11.75,
+      "orderId": "10",
+      "sizeId": 4,
+      "sauceId": 1,
+      "cheeseId": 1,
+      "totalCost": 15,
       "id": 4
     },
     {
-      "orderId": "34",
-      "sizeId": 2,
+      "orderId": "10",
+      "sizeId": 5,
       "sauceId": 1,
       "cheeseId": 2,
-      "totalCost": 11,
+      "totalCost": 20.75,
       "id": 5
     },
     {
       "orderId": "33",
-      "sizeId": 3,
-      "sauceId": 3,
-      "cheeseId": 3,
-      "totalCost": 15.25,
+      "sizeId": 2,
+      "sauceId": 2,
+      "cheeseId": 1,
+      "totalCost": 12.75,
       "id": 6
     },
     {
-      "orderId": "35",
-      "sizeId": 2,
-      "sauceId": 3,
-      "cheeseId": 4,
-      "totalCost": 11.25,
-      "id": 7
-    },
-    {
-      "orderId": "36",
-      "sizeId": 2,
-      "sauceId": 5,
-      "cheeseId": 6,
-      "totalCost": 10.5,
-      "id": 8
-    },
-    {
-      "orderId": "37",
-      "sizeId": 3,
+      "orderId": "34",
+      "sizeId": 1,
       "sauceId": 2,
       "cheeseId": 3,
-      "totalCost": 18.5,
-      "id": 9
-    },
-    {
-      "orderId": "38",
-      "sizeId": 2,
-      "sauceId": 3,
-      "cheeseId": 2,
-      "totalCost": 10,
-      "id": 10
+      "totalCost": 7,
+      "id": 7
     }
   ],
   "pizzaToppings": [
-    {
-      "pizzaId": 1,
-      "toppingId": 3,
-      "id": 1
-    },
-    {
-      "pizzaId": 1,
-      "toppingId": 4,
-      "id": 2
-    },
     {
       "pizzaId": 2,
       "toppingId": 3,
@@ -810,89 +781,24 @@
       "id": 5
     },
     {
-      "pizzaId": 4,
-      "toppingId": 3,
+      "pizzaId": 6,
+      "toppingId": 1,
       "id": 6
     },
     {
-      "pizzaId": 4,
+      "pizzaId": 6,
       "toppingId": 2,
       "id": 7
     },
     {
-      "pizzaId": 5,
-      "toppingId": 2,
+      "pizzaId": 6,
+      "toppingId": 3,
       "id": 8
     },
     {
-      "pizzaId": 6,
-      "toppingId": 3,
+      "pizzaId": 7,
+      "toppingId": 2,
       "id": 9
-    },
-    {
-      "pizzaId": 6,
-      "toppingId": 2,
-      "id": 10
-    },
-    {
-      "pizzaId": 6,
-      "toppingId": 8,
-      "id": 11
-    },
-    {
-      "pizzaId": 7,
-      "toppingId": 3,
-      "id": 12
-    },
-    {
-      "pizzaId": 7,
-      "toppingId": 4,
-      "id": 13
-    },
-    {
-      "pizzaId": 8,
-      "toppingId": 7,
-      "id": 14
-    },
-    {
-      "pizzaId": 9,
-      "toppingId": 3,
-      "id": 15
-    },
-    {
-      "pizzaId": 9,
-      "toppingId": 2,
-      "id": 16
-    },
-    {
-      "pizzaId": 9,
-      "toppingId": 4,
-      "id": 17
-    },
-    {
-      "pizzaId": 9,
-      "toppingId": 5,
-      "id": 18
-    },
-    {
-      "pizzaId": 9,
-      "toppingId": 6,
-      "id": 19
-    },
-    {
-      "pizzaId": 9,
-      "toppingId": 7,
-      "id": 20
-    },
-    {
-      "pizzaId": 9,
-      "toppingId": 8,
-      "id": 21
-    },
-    {
-      "pizzaId": 9,
-      "toppingId": 1,
-      "id": 22
     }
   ]
 }
