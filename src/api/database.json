@@ -136,6 +136,14 @@
       "email": "royeffinkent@aol.com",
       "tableNumber": "",
       "id": 5
+    },
+    {
+      "name": "Keely Jones",
+      "address": "999 Boots and Cats ave",
+      "phone": "999-999-9999",
+      "email": "keelykeel@gmail.com",
+      "tableNumber": "33",
+      "id": 6
     }
   ],
   "orders": [
@@ -179,6 +187,17 @@
         "id": 5
       },
       "isAssigned": false
+    },
+    {
+      "customerId": 6,
+      "orderTime": "2025-05-07T20:07:34.953Z",
+      "tableNumber": "33",
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 0,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": null,
+      "id": 3
     }
   ],
   "sizes": [
