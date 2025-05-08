@@ -72,7 +72,7 @@
       "address": "135 Maple St, Portland, OR 97205",
       "phone": 5557777,
       "email": "georgeyboy@example.com",
-      "isAssigned": false,
+      "isAssigned": true,
       "isAdmin": false
     },
     {
@@ -181,6 +181,14 @@
       "email": "yo@neopets.com",
       "tableNumber": "69",
       "id": 12
+    },
+    {
+      "name": "Ted Lasso",
+      "address": "1933 Believe Ln",
+      "phone": "999",
+      "email": "TedLasso@neopets.com",
+      "tableNumber": "",
+      "id": 13
     }
   ],
   "orders": [
@@ -303,6 +311,18 @@
       "takenByEmployeeId": 2,
       "deliveredByEmployeeId": null,
       "id": 8
+    },
+    {
+      "id": 9,
+      "customerId": 13,
+      "order": "2025-05-08T17:21:48.796Z",
+      "tableNumber": null,
+      "status": "Out-for-Delivery",
+      "gratuity": 4,
+      "totalCost": 17.5,
+      "takenByEmployeeId": 5,
+      "deliveredByEmployeeId": 7,
+      "monthId": 5
     }
   ],
   "sizes": [
@@ -489,6 +509,14 @@
       "cheeseId": 1,
       "totalCost": 13.5,
       "id": 6
+    },
+    {
+      "orderId": "9",
+      "sizeId": 2,
+      "sauceId": 4,
+      "cheeseId": 2,
+      "totalCost": 13.5,
+      "id": 7
     }
   ],
   "pizzaToppings": [
@@ -581,6 +609,31 @@
       "pizzaId": 6,
       "toppingId": 2,
       "id": 18
+    },
+    {
+      "pizzaId": 7,
+      "toppingId": 2,
+      "id": 19
+    },
+    {
+      "pizzaId": 7,
+      "toppingId": 3,
+      "id": 20
+    },
+    {
+      "pizzaId": 7,
+      "toppingId": 7,
+      "id": 21
+    },
+    {
+      "pizzaId": 7,
+      "toppingId": 5,
+      "id": 22
+    },
+    {
+      "pizzaId": 7,
+      "toppingId": 6,
+      "id": 23
     }
   ]
 }

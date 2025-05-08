@@ -113,11 +113,11 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  animation: myAnim 2s ease 0s 1 normal forwards;
+  animation: toppingsAnim 2s ease 0s 1 normal forwards;
   pointer-events: none;
 }
 
-@keyframes myAnim {
+@keyframes toppingsAnim {
 	0% {
 		opacity: 0;
 	}
