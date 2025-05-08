@@ -2,44 +2,21 @@
   "employees": [
     {
       "id": 1,
-      "customerId": 4,
-      "order": "2025-05-07T19:17:18.246Z",
-      "tableNumber": null,
-      "status": "Out-for-Delivery",
-      "gratuity": 3,
-      "totalCost": 19,
-      "takenByEmployeeId": 1,
-      "deliveredByEmployeeId": 6,
-      "customer": {
-        "name": "Julian Casablancas",
-        "address": "1809 Reptillia Ave",
-        "phone": "999-999-9999",
-        "email": "jc@yahooanswers.com",
-        "tableNumber": "",
-        "id": 4
-      },
-      "isAssigned": false
+      "name": "Alice Thompson",
+      "address": "123 Main St, Springfield, IL 62704",
+      "phone": 5551111,
+      "email": "alice@example.com",
+      "isAssigned": false,
+      "isAdmin": false
     },
     {
       "id": 2,
-      "customerId": 5,
-      "order": "2025-05-07T19:23:17.293Z",
-      "tableNumber": null,
-      "status": "Out-for-Delivery",
-      "gratuity": 3,
-      "totalCost": 18.5,
-      "takenByEmployeeId": 1,
-      "deliveredByEmployeeId": 2,
-      "monthId": 5,
-      "customer": {
-        "name": "Roy Kent",
-        "address": "7777 Richmond ave",
-        "phone": "999-999-9999",
-        "email": "royeffinkent@aol.com",
-        "tableNumber": "",
-        "id": 5
-      },
-      "isAssigned": false
+      "name": "Bob Reynolds",
+      "address": "456 Side St, Madison, WI 53703",
+      "phone": 4444445,
+      "email": "bob@example.com",
+      "isAssigned": false,
+      "isAdmin": true
     },
     {
       "id": 3,
@@ -47,17 +24,29 @@
       "address": "789 Broad St, Columbus, OH 43215",
       "phone": 5553333,
       "email": "charlie@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     },
     {
       "id": 4,
-      "name": "Diana Foster",
-      "address": "321 Oak St, Austin, TX 73301",
-      "phone": 5554444,
-      "email": "diana@example.com",
-      "isAssigned": false,
-      "isAdmin": false
+      "customerId": 7,
+      "order": "2025-05-08T02:53:08.507Z",
+      "tableNumber": null,
+      "status": "Out-for-Delivery",
+      "gratuity": 0,
+      "totalCost": 8.5,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": 4,
+      "monthId": 5,
+      "customer": {
+        "name": "Han Solo",
+        "address": "1313 Millenium Falcon",
+        "phone": "999-999-9999",
+        "email": "hanshotfirst@bing.com",
+        "tableNumber": "",
+        "id": 7
+      },
+      "isAssigned": false
     },
     {
       "id": 5,
@@ -74,7 +63,7 @@
       "address": "987 Cedar St, Seattle, WA 98101",
       "phone": 5556666,
       "email": "fiona@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": true
     },
     {
@@ -83,7 +72,7 @@
       "address": "135 Maple St, Portland, OR 97205",
       "phone": 5557777,
       "email": "georgeyboy@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     },
     {
@@ -92,7 +81,7 @@
       "address": "246 Birch St, Phoenix, AZ 85004",
       "phone": 5558888,
       "email": "hannah@example.com",
-      "isAssigned": true,
+      "isAssigned": false,
       "isAdmin": false
     }
   ],
@@ -144,6 +133,54 @@
       "email": "keelykeel@gmail.com",
       "tableNumber": "33",
       "id": 6
+    },
+    {
+      "name": "Han Solo",
+      "address": "1313 Millenium Falcon",
+      "phone": "999-999-9999",
+      "email": "hanshotfirst@bing.com",
+      "tableNumber": "",
+      "id": 7
+    },
+    {
+      "name": "Dadi Freyr",
+      "address": "1999 Montaigne Ave",
+      "phone": "999-999-9999",
+      "email": "neopets.com",
+      "tableNumber": "",
+      "id": 8
+    },
+    {
+      "name": "Rebecca Welton ",
+      "address": "999 daskfjlkasjflk",
+      "phone": "999-999-9999",
+      "email": "revasdflkasdjl@gmail",
+      "tableNumber": "33",
+      "id": 9
+    },
+    {
+      "name": "Cass",
+      "address": "1922 Easterman Lane",
+      "phone": "999-999-9999",
+      "email": "cassthebadass@gmail.com",
+      "tableNumber": "",
+      "id": 10
+    },
+    {
+      "name": "Bob Ross",
+      "address": "1312 happy little tree ln",
+      "phone": "999-999-9999",
+      "email": "bob@neopets.com",
+      "tableNumber": "",
+      "id": 11
+    },
+    {
+      "name": "Princess Leia",
+      "address": "Tatooine",
+      "phone": "99999999",
+      "email": "yo@neopets.com",
+      "tableNumber": "69",
+      "id": 12
     }
   ],
   "orders": [
@@ -198,6 +235,74 @@
       "takenByEmployeeId": 1,
       "deliveredByEmployeeId": null,
       "id": 3
+    },
+    {
+      "id": 4,
+      "customerId": 7,
+      "order": "2025-05-08T02:53:08.507Z",
+      "tableNumber": null,
+      "status": "Completed",
+      "gratuity": 0,
+      "totalCost": 8.5,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": 4,
+      "monthId": 5,
+      "customer": {
+        "name": "Han Solo",
+        "address": "1313 Millenium Falcon",
+        "phone": "999-999-9999",
+        "email": "hanshotfirst@bing.com",
+        "tableNumber": "",
+        "id": 7
+      },
+      "isAssigned": false
+    },
+    {
+      "id": 5,
+      "customerId": 8,
+      "order": "2025-05-08T03:14:02.236Z",
+      "tableNumber": null,
+      "status": "Out-for-Delivery",
+      "gratuity": 4,
+      "totalCost": 17.25,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": 6,
+      "monthId": 5
+    },
+    {
+      "id": 6,
+      "customerId": 9,
+      "order": "2025-05-08T14:03:40.105Z",
+      "tableNumber": "33",
+      "status": "Pending",
+      "gratuity": 3,
+      "totalCost": 15.25,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": null,
+      "monthId": 5
+    },
+    {
+      "id": 7,
+      "customerId": 10,
+      "order": "2025-05-08T14:16:06.441Z",
+      "tableNumber": null,
+      "status": "Out-for-Delivery",
+      "gratuity": 2,
+      "totalCost": 15.5,
+      "takenByEmployeeId": 1,
+      "deliveredByEmployeeId": 5,
+      "monthId": 5
+    },
+    {
+      "customerId": 12,
+      "orderTime": "2025-05-08T15:58:07.984Z",
+      "tableNumber": "69",
+      "status": "Pending",
+      "gratuity": 0,
+      "totalCost": 0,
+      "takenByEmployeeId": 2,
+      "deliveredByEmployeeId": null,
+      "id": 8
     }
   ],
   "sizes": [
@@ -230,91 +335,110 @@
   "cheeses": [
     {
       "id": 1,
-      "name": "Mozzarella"
+      "name": "Mozzarella",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/%20cheese/Untitled_Artwork-6%20(1).png?updatedAt=1746671296375"
     },
     {
       "id": 2,
-      "name": "Buffalo Mozzarella"
+      "name": "Buffalo Mozzarella",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/%20cheese/Untitled_Artwork-11%20(1).png?updatedAt=1746671367866"
     },
     {
       "id": 3,
-      "name": "Four Cheese"
+      "name": "Four Cheese",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/%20cheese/Untitled_Artwork-8%20(1).png?updatedAt=1746671368034"
     },
     {
       "id": 4,
-      "name": "Vegan"
+      "name": "Vegan",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/%20cheese/Untitled_Artwork-6%20(1).png?updatedAt=1746671296375"
     },
     {
       "id": 5,
-      "name": "Ricotta"
+      "name": "Ricotta",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/%20cheese/Untitled_Artwork-10%20(1).png?updatedAt=1746671368761"
     },
     {
       "id": 6,
-      "name": "None"
+      "name": "None",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Untitled_Artwork-13.png?updatedAt=1746649947208"
     }
   ],
   "sauces": [
     {
       "id": 1,
-      "name": "Marinara"
+      "name": "Marinara",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Sauces/Untitled_Artwork-5.png?updatedAt=1746650015410"
     },
     {
       "id": 2,
-      "name": "Arrabbiata"
+      "name": "Arrabbiata",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Sauces/Untitled_Artwork-4.png?updatedAt=1746650016767"
     },
     {
       "id": 3,
-      "name": "Garlic White"
+      "name": "Garlic White",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Sauces/Untitled_Artwork-2.png?updatedAt=1746652197427"
     },
     {
       "id": 4,
-      "name": "Diavolo"
+      "name": "Diavolo",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Sauces/Untitled_Artwork-3.png?updatedAt=1746650018210"
     },
     {
       "id": 5,
-      "name": "None"
+      "name": "None",
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Untitled_Artwork-13.png?updatedAt=1746649947208"
     }
   ],
   "toppings": [
     {
       "id": 1,
       "name": "Sausage",
-      "price": 1
+      "price": 1,
+      "url": " "
     },
     {
       "id": 2,
       "name": "Pepperoni",
-      "price": 1
+      "price": 1,
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Toppings/Untitled_Artwork-15.png?updatedAt=1746671589317"
     },
     {
       "id": 3,
       "name": "Mushroom",
-      "price": 0.75
+      "price": 0.75,
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Toppings/Untitled_Artwork-12%20(1).png?updatedAt=1746671589078"
     },
     {
       "id": 4,
       "name": "Onion",
-      "price": 0.5
+      "price": 0.5,
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Toppings/Untitled_Artwork-14.png?updatedAt=1746671589037"
     },
     {
       "id": 5,
       "name": "Green pepper",
-      "price": 0.5
+      "price": 0.5,
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Toppings/Untitled_Artwork-16.png?updatedAt=1746671588961"
     },
     {
       "id": 6,
       "name": "Black olives",
-      "price": 0.75
+      "price": 0.75,
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Toppings/Untitled_Artwork-9.png?updatedAt=1746671637001"
     },
     {
       "id": 7,
       "name": "Basil",
-      "price": 0.5
+      "price": 0.5,
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Toppings/Untitled_Artwork-17.png?updatedAt=1746671589201"
     },
     {
       "id": 8,
       "name": "Extra cheese",
-      "price": 1
+      "price": 1,
+      "url": "https://ik.imagekit.io/b0xq0alh4/Dom-Ino's/Toppings/Untitled_Artwork-7%20(1).png?updatedAt=1746671589598"
     }
   ],
   "pizzas": [
@@ -333,6 +457,38 @@
       "cheeseId": 5,
       "totalCost": 15.5,
       "id": 2
+    },
+    {
+      "orderId": "4",
+      "sizeId": 1,
+      "sauceId": 1,
+      "cheeseId": 2,
+      "totalCost": 8.5,
+      "id": 3
+    },
+    {
+      "orderId": "5",
+      "sizeId": 3,
+      "sauceId": 2,
+      "cheeseId": 1,
+      "totalCost": 13.25,
+      "id": 4
+    },
+    {
+      "orderId": "6",
+      "sizeId": 2,
+      "sauceId": 4,
+      "cheeseId": 1,
+      "totalCost": 12.25,
+      "id": 5
+    },
+    {
+      "orderId": "7",
+      "sizeId": 3,
+      "sauceId": 1,
+      "cheeseId": 1,
+      "totalCost": 13.5,
+      "id": 6
     }
   ],
   "pizzaToppings": [
@@ -375,6 +531,56 @@
       "pizzaId": 2,
       "toppingId": 5,
       "id": 8
+    },
+    {
+      "pizzaId": 3,
+      "toppingId": 3,
+      "id": 9
+    },
+    {
+      "pizzaId": 3,
+      "toppingId": 5,
+      "id": 10
+    },
+    {
+      "pizzaId": 3,
+      "toppingId": 6,
+      "id": 11
+    },
+    {
+      "pizzaId": 3,
+      "toppingId": 7,
+      "id": 12
+    },
+    {
+      "pizzaId": 4,
+      "toppingId": 3,
+      "id": 13
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 3,
+      "id": 14
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 4,
+      "id": 15
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 5,
+      "id": 16
+    },
+    {
+      "pizzaId": 5,
+      "toppingId": 7,
+      "id": 17
+    },
+    {
+      "pizzaId": 6,
+      "toppingId": 2,
+      "id": 18
     }
   ]
 }
