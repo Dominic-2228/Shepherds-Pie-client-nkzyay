@@ -1,4 +1,5 @@
 {
+  "homepage": "https://dominic-2228.github.io/Shepherds-Pie-client-nkzyay",
   "name": "shepherds-pies-frontend",
   "version": "0.1.0",
   "private": true,
@@ -14,10 +15,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "vite",
+    "start": "json-server --watch database.json --port $PORT",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +41,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.3.0",
     "vite": "^5.2.7"
   }
 }
